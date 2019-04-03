@@ -58,7 +58,7 @@ html {
 /*overflow-x: hidden;*/ }
 /* #Typography
 ================================================== */
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	color: black;
 	font-family:'Oswald', serif;
 	font-weight: normal;
@@ -69,11 +69,20 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	color: #fff;
 }
 h1 {
-	font-size: 48px;
-	margin-bottom: 20px;
+	font-family: 'Georgia', serif;
+	text-align: center;
+	text-shadow: 2px 2px #f690dc;
+	line-height: 1.0;
+	margin-top: 70px;
+	font-size: 70px;
+	margin-bottom:50px;
 }
 h2 {
-	font-size: 30px;
+	text-align: center;
+	text-shadow: 2px 2px #f690dc;
+	line-height: 1.0;
+	margin-top: 50px;
+	font-size: 50px;
 	margin-bottom:10px;
 }
 h3 {
