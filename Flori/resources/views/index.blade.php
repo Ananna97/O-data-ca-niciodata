@@ -32,7 +32,7 @@
   <div class="container"> 
     <!-- Menu -->
 
-    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" /></a></div>
+    <div class="logo"><a href="index"><img src="images/logo.png" alt="" /></a></div>
     <div class="mainmenu">
       <div id="mainmenu">
         <ul class="sf-menu">
@@ -50,11 +50,11 @@
       <form id="responsive-menu" action="#" method="post">
         <select>
           <option value="">Navigation</option>
-          <option value="index.html">Home</option>
-          <option value="about.html">About</option>
-          <option value="products.html">Products</option>
-          <option value="promotions.html">Promotions</option>
-          <option value="contact.html">Contact</option>
+          <option value="/index">Home</option>
+          <option value="/about">About</option>
+          <option value="/products">Products</option>
+          <option value="/promotions">Promotions</option>
+          <option value="/contact">Contact</option>
         </select>
       </form>
     </div>
@@ -67,21 +67,21 @@
 
 <div class="slideshow-container">
 
-  <a href="products.html">
+  <a href="products">
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
       <img src="images/Cover/Cover1.jpg" style="width:100%">
     </div>
   </a>
 
-  <a href="promotions.html">
+  <a href="promotions">
     <div class="mySlides fade">
       <div class="numbertext">2 / 3</div>
       <img  src="images/Cover/Cover2.jpg" style="width:100%">
     </div>
   </a>
 
-  <a href="about.html">
+  <a href="about">
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
       <img src="images/Cover/Cover3.jpg" style="width:100%">
@@ -118,7 +118,7 @@
 <div class="footer">
   <div class="container">
     <div class="one_fourth">
-      <h3><a href="contact.html">Contact Informations</a></h3>
+      <h3><a href="contact">Contact Informations</a></h3>
       <p style="color:white;"><span class="orange"><strong>Address:</strong></span> <br>
         Romania, Bucharest, Sector 1</p>
       <p style="color:white;"><span class="orange"><strong>Phone:</strong></span> <br>
@@ -130,11 +130,11 @@
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth">
-      <h3><a href="products.html">Products</a></h3>
+      <h3><a href="products">Products</a></h3>
       <ul>
-        <li><a href="products.html" title="">Gifts</a></li>
-        <li><a href="products.html" class="">Love</a></li>
-        <li><a href="products.html" class="">Events</a></li>
+        <li><a href="products" title="">Gifts</a></li>
+        <li><a href="products" class="">Love</a></li>
+        <li><a href="products" class="">Events</a></li>
       </ul>
     </div>
     <!-- four columns ends here -->
@@ -150,8 +150,8 @@
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth lastcolumn">
-      <h3><a href="about.html">About</a></h3>
-      <p><a href="about.html" rel="nofollow">Flower shop online</a></p>
+      <h3><a href="about">About</a></h3>
+      <p><a href="about" rel="nofollow">Flower shop online</a></p>
     </div>
     <!-- four columns ends here --> 
   </div>

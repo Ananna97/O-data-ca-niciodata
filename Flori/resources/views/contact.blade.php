@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="css/skeleton.css">
 <link rel="stylesheet" href="css/screen.css">
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/slideshow.css">
 
 <!-- Icons -->
 
@@ -32,16 +31,16 @@
   <div class="container"> 
     <!-- Menu -->
 
-    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" /></a></div>
+   <div class="logo"><a href="index"><img src="images/logo.png" alt="" /></a></div>
     <div class="mainmenu">
       <div id="mainmenu">
         <ul class="sf-menu">
-          <li><a href="/index" style="color: red" id="visited">Home</a></li>
+          <li><a href="/index" style="color: red">Home</a></li>
           <li><a href="/about" style="color: orange">About</a></li>
           <li><a href="/products" style="color: yellow">Products</a>
           </li>
           <li><a href="/promotions" style="color: green">Promotions</a></li>
-          <li><a href="/contact" style="color: blue">Contact</a></li>
+          <li><a href="/contact" style="color: blue" id="visited">Contact</a></li>
         </ul>
       </div>
 
@@ -50,11 +49,11 @@
       <form id="responsive-menu" action="#" method="post">
         <select>
           <option value="">Navigation</option>
-          <option value="index.html">Home</option>
-          <option value="about.html">About</option>
-          <option value="products.html">Products</option>
-          <option value="promotions.html">Promotions</option>
-          <option value="contact.html">Contact</option>
+          <option value="/index">Home</option>
+          <option value="/about">About</option>
+          <option value="/products">Products</option>
+          <option value="/promotions">Promotions</option>
+          <option value="/contact">Contact</option>
         </select>
       </form>
     </div>
@@ -63,39 +62,80 @@
 
 </div>
 
-<!-- Slider -->
-
-<div class="slideshow-container">
-
-  <a href="products.html">
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="images/Cover/Cover1.jpg" style="width:100%">
-    </div>
-  </a>
-
-  <a href="promotions.html">
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img  src="images/Cover/Cover2.jpg" style="width:100%">
-    </div>
-  </a>
-
-  <a href="about.html">
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="images/Cover/Cover3.jpg" style="width:100%">
+<!--Breadcrumbs ==================================================
+================================================== -->
+<div class="breadcrumbs">
+  <div class="container">
+    <header>
+      <h3>Contact Page</h3>
+    </header>
   </div>
-  </a>
-
+  <!-- container ends here -->
+  <hr class="separator1">
 </div>
-<br>
+<!-- breadcrumbs ends here --> 
+<!-- Contact Content Part - GoogleMap ==================================================
+================================================== -->
+<section class="map"> 
+  <!-- google map -->
+  <div class="map-holder">
+    <div class="map-container">
+      <iframe class="map" src="https://maps.google.com/maps?q=strada%20florilor&t=&z=13&ie=UTF8&iwloc=&output=embed" ></iframe>
+      <!-- end google map --> 
+    </div>
+    <!--map-container ends here--> 
+  </div>
+  <!--map-holder ends here--> 
+</section>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
+<!-- Contact Content Part - Contact Form ==================================================
+================================================== -->
+<div class="container contact"> 
+  <!-- Contact Sidebar ==================================================
+================================================== -->
+  <div class="one_third">
+    <h3>Our Info</h3>
+    <section class="first shadow" style="border: 2px solid black;">
+      <ul>
+        <li>Romania, Bucharest</li>
+        <li>Phone: +40 728 790 182</li>
+        <li>Website: <a href="#" title="" style="color:black">The Lazy Unicorn</a></li>
+        <li>Email: <a href="#" title="" style="color:black">ana_iancu97@yahoo.com</a></li>
+      </ul>
+    </section>
+  </div>
+  <!-- one_third ends here -->
+  <div class="two_third lastcolumn contact1">
+    <div id="contactForm">
+      <h3>Contact us</h3>
+      <div class="sepContainer"></div>
+      <form action="process.php" method="post" id="contact_form">
+        <div class="name">
+          <label for="name">Your Name:</label>
+          <p> Please enter your full name</p>
+          <input id=name name=name type=text placeholder="Your Name" required />
+        </div>
+        <div class="email">
+          <label for="email">Your Email:</label>
+          <p> Please enter your email address</p>
+          <input id=email name=email type=email placeholder="email@email.com" required />
+        </div>
+        <div class="message">
+          <label for="message">Your Message:</label>
+          <p> Please enter your question</p>
+          <textarea id=message name=message rows=6 cols=10 required></textarea>
+        </div>
+        <div id="loader">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+    <!-- end contactForm --> 
+  </div>
 </div>
+<div class="blankSeparator"></div>
+
+
 
 <!-- Socialize ==================================================
 ================================================== -->
@@ -118,7 +158,7 @@
 <div class="footer">
   <div class="container">
     <div class="one_fourth">
-      <h3><a href="contact.html">Contact Informations</a></h3>
+      <h3><a href="contact">Contact Informations</a></h3>
       <p style="color:white;"><span class="orange"><strong>Address:</strong></span> <br>
         Romania, Bucharest, Sector 1</p>
       <p style="color:white;"><span class="orange"><strong>Phone:</strong></span> <br>
@@ -130,11 +170,11 @@
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth">
-      <h3><a href="products.html">Products</a></h3>
+      <h3><a href="products">Products</a></h3>
       <ul>
-        <li><a href="products.html" title="">Gifts</a></li>
-        <li><a href="products.html" class="">Love</a></li>
-        <li><a href="products.html" class="">Events</a></li>
+        <li><a href="products" title="">Gifts</a></li>
+        <li><a href="products" class="">Love</a></li>
+        <li><a href="products" class="">Events</a></li>
       </ul>
     </div>
     <!-- four columns ends here -->
@@ -150,24 +190,27 @@
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth lastcolumn">
-      <h3><a href="about.html">About</a></h3>
-      <p><a href="about.html" rel="nofollow">Flower shop online</a></p>
+      <h3><a href="about">About</a></h3>
+      <p><a href="about" rel="nofollow">Flower shop online</a></p>
     </div>
     <!-- four columns ends here --> 
   </div>
   <!-- container ends here --> 
 </div>
 
-
-
-<!-- Copyright -->
+<!-- Copyright ==================================================
+================================================== -->
 <div id="copyright">
   <div class="container">
-    <p class="copyright">&copy; Copyright 2019. All rights reserved.</p>
+    <p class="copyright">&copy; Copyright 2013. &quot;Freebix&quot; by <a href="http://www.anarieldesign.com/" rel="nofollow">Anariel Design</a>. All rights reserved.</p>
   </div>
-
+  <!-- container ends here --> 
 </div>
-<!-- Scripts  --> 
+<!-- copyright ends here --> 
+<!-- End Document
+================================================== --> 
+<!-- Scripts ==================================================
+================================================== --> 
 <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script> 
 <!-- Main js files --> 
 <script src="js/screen.js" type="text/javascript"></script> 
@@ -178,10 +221,9 @@
 <!-- Include Superfish --> 
 <script src="js/superfish.js" type="text/javascript"></script> 
 <script src="js/hoverIntent.js" type="text/javascript"></script> 
-
+<!-- Flexslider --> 
+<script src="js/jquery.flexslider-min.js" type="text/javascript"></script> 
 <!-- Modernizr --> 
 <script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
-
-<script src="js/slideshow.js" type="text/javascript"></script> 
 </body>
 </html>
