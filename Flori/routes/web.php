@@ -14,3 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/contact', [
+	'uses' => 'ContactController@create'
+]);
+
+Route::get('/index', [
+	'uses' => 'IndexController@create'
+]);
+
+Route::get('/about', [
+	'uses' => 'AboutController@create'
+]);
+
+Route::get('/products', [
+	'uses' => 'ProductsController@create'
+]);
+
+Route::get('/promotions', [
+	'uses' => 'PromotionsController@create'
+]);
