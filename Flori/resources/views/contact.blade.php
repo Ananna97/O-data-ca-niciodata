@@ -4,13 +4,14 @@
 <head>
 
 <meta charset="utf-8">
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
 <!-- CSS -->
 
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/skeleton2.css">
 <link rel="stylesheet" href="css/screen.css">
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
 
@@ -37,10 +38,11 @@
         <ul class="sf-menu">
           <li><a href="/index" style="color: red">Home</a></li>
           <li><a href="/about" style="color: orange">About</a></li>
-          <li><a href="/products" style="color: yellow">Products</a>
+          <li><a href="/shop" style="color: yellow">Products</a>
           </li>
           <li><a href="/promotions" style="color: green">Promotions</a></li>
           <li><a href="/contact" style="color: blue" id="visited">Contact</a></li>
+          <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
         </ul>
       </div>
 
@@ -54,6 +56,7 @@
           <option value="/products">Products</option>
           <option value="/promotions">Promotions</option>
           <option value="/contact">Contact</option>
+          <option value="/cart">Shopping Cart</option>
         </select>
       </form>
     </div>
@@ -100,7 +103,7 @@
         <li>Romania, Bucharest</li>
         <li>Phone: +40 728 790 182</li>
         <li>Website: <a href="#" title="" style="color:black">The Lazy Unicorn</a></li>
-        <li>Email: <a href="#" title="" style="color:black">ana_iancu97@yahoo.com</a></li>
+        <li>Email: <a href="#" title="" style="color:black">thelazyunicorn97@gmail.com</a></li>
       </ul>
     </section>
   </div>
@@ -109,25 +112,33 @@
     <div id="contactForm">
       <h3>Contact us</h3>
       <div class="sepContainer"></div>
-      <form action="process.php" method="post" id="contact_form">
+
+      <form action="{{ route('contact.store') }}" method="post" id="contact_form">
+       
+        <input type="hidden" name="_token" value="{{ Session::token() }}">
+
         <div class="name">
           <label for="name">Your Name:</label>
           <p> Please enter your full name</p>
-          <input id=name name=name type=text placeholder="Your Name" required />
+          <input id=name name=name type=text placeholder="Your Full Name" required />
         </div>
+
         <div class="email">
           <label for="email">Your Email:</label>
           <p> Please enter your email address</p>
           <input id=email name=email type=email placeholder="email@email.com" required />
         </div>
+
         <div class="message">
           <label for="message">Your Message:</label>
           <p> Please enter your question</p>
           <textarea id=message name=message rows=6 cols=10 required></textarea>
         </div>
+
         <div id="loader">
           <input type="submit" value="Submit" />
         </div>
+
       </form>
     </div>
     <!-- end contactForm --> 
@@ -155,8 +166,15 @@
 </div>
 
 <!-- Footer -->
-<div class="footer">
-  <div class="container">
+<!-- four columns ends here -->
+    <div class="footer">
+
+    <div class="container1">
+    <div class="one_fourth">
+
+    <img src="images/zebra.jpg" class="zebra" alt="" />
+    </div>
+
     <div class="one_fourth">
       <h3><a href="contact">Contact Informations</a></h3>
       <p style="color:white;"><span class="orange"><strong>Address:</strong></span> <br>
@@ -165,17 +183,8 @@
         +40 728 790 182<br>
       </p>
       <p style="color:white;"><span class="orange"><strong>Email:</strong></span> <br>
-        ana_iancu97@yahoo.com<br>
+        thelazyunicorn97@gmail.com<br>
       </p>
-    </div>
-    <!-- four columns ends here -->
-    <div class="one_fourth">
-      <h3><a href="products">Products</a></h3>
-      <ul>
-        <li><a href="products" title="">Gifts</a></li>
-        <li><a href="products" class="">Love</a></li>
-        <li><a href="products" class="">Events</a></li>
-      </ul>
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth">
@@ -211,7 +220,9 @@
 ================================================== --> 
 <!-- Scripts ==================================================
 ================================================== --> 
+
 <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script> 
+
 <!-- Main js files --> 
 <script src="js/screen.js" type="text/javascript"></script> 
 <!-- Tabs --> 

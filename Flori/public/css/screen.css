@@ -481,6 +481,12 @@ ul.socials li {
   display: table;
 }
 
+.zebra{
+	height: auto;
+	width: 50%;
+	float: right;
+}
+
 
 
 /*Products*/
@@ -791,7 +797,7 @@ form#contact_form input[type="submit"] {
 	width: 65.33%;
 }
 .one_fourth {
-	width: 22%;
+	width: 20%;
 }
 .one_fifth {
 	width: 16.8%;
@@ -800,9 +806,10 @@ form#contact_form input[type="submit"] {
 	width: 15%;
 }
 .one_half, .one_third, .two_third, .one_fourth, .one_fifth {
-	margin-right: 4%;
+	margin-right: 0;
 	margin-bottom: 10px;
 	float: left;
+	margin-left: 5%;
 }
 .one_sixth {
 	margin-right: 2%;

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Validation\Request;
+use Illuminate\Http\Request;
 
 class PromotionsController extends Controller
 {

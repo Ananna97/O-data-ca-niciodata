@@ -11,26 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'index');
+
+Route::view('/index', 'index');
+
+Route::view('/about', 'about');
+
+//Route::view('/products', 'products');
+
+Route::get('/shop', 'ShopController@index')->name('shop');
+
+Route::view('/promotions', 'promotions');
+
+
 
 Route::get('/contact', [
 	'uses' => 'ContactController@create'
 ]);
 
-Route::get('/index', [
-	'uses' => 'IndexController@create'
+//post route for contact page
+
+Route::post('/contact', [
+	'uses' => 'ContactController@postContact',
+	'as' => 'contact.store'
 ]);
 
-Route::get('/about', [
-	'uses' => 'AboutController@create'
+
+ 
+Route::get('/cart', [
+	'uses' => 'CartController@create'
 ]);
 
-Route::get('/products', [
-	'uses' => 'ProductsController@create'
-]);
-
-Route::get('/promotions', [
-	'uses' => 'PromotionsController@create'
-]);

@@ -11,6 +11,7 @@
 
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/skeleton2.css">
 <link rel="stylesheet" href="css/screen.css">
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
 
@@ -37,10 +38,11 @@
         <ul class="sf-menu">
           <li><a href="/index" style="color: red">Home</a></li>
           <li><a href="/about" style="color: orange">About</a></li>
-          <li><a href="/products" style="color: yellow" id="visited">Products</a>
+          <li><a href="/shop" style="color: yellow" id="visited">Products</a>
           </li>
           <li><a href="/promotions" style="color: green">Promotions</a></li>
-          <li><a href="/contact" style="color: blue">Contact</a></li>
+          <li><a href="/contact" style="color: blue">Contact</a></li>>
+          <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
         </ul>
       </div>
 
@@ -54,6 +56,7 @@
           <option value="/products">Products</option>
           <option value="/promotions">Promotions</option>
           <option value="/contact">Contact</option>
+          <option value="/cart">Shopping Cart</option>
         </select>
       </form>
     </div>
@@ -75,133 +78,32 @@
   <hr class="separator1">
 </div>
 <!-- breadcrumbs ends here --> 
-<!-- Portfolio ==================================================
-================================================== -->
-<div class="container portfolio">
-  <div class="one_third shadow">
-    <div class="view view-first"> <img src="images/portfolio/a.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Beauty</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third shadow">
-    <div class="view view-first"> <img src="images/portfolio/b.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Fashion</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third lastcolumn shadow">
-    <div class="view view-first"> <img src="images/portfolio/c.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Inspirational</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third shadow">
-    <div class="view view-first"> <img src="images/portfolio/b.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Beauty</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third shadow">
-    <div class="view view-first"> <img src="images/portfolio/c.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Fashion</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third lastcolumn shadow">
-    <div class="view view-first"> <img src="images/portfolio/a.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Inspirational</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  
-  <div class="one_third shadow">
-    <div class="view view-first"> <img src="images/portfolio/c.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Beauty</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third shadow">
-    <div class="view view-first"> <img src="images/portfolio/a.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Fashion</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third lastcolumn shadow">
-    <div class="view view-first"> <img src="images/portfolio/b.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Inspirational</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third shadow">
-    <div class="view view-first"> <img src="images/portfolio/a.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Beauty</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third shadow">
-    <div class="view view-first"> <img src="images/portfolio/b.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Charity</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third-->
-  <div class="one_third lastcolumn shadow">
-    <div class="view view-first"> <img src="images/portfolio/c.jpg" alt="" />
-      <div class="mask">
-        <h2><a href="#">Inspirational</a></h2>
-      </div>
-      <!-- mask ends here --> 
-    </div>
-    <!-- view ends here --> 
-  </div>
-  <!--end one_third--> 
+
+
+
+<!--Products-->
+
+<div class="container_portfolio">
+        @foreach ($products as $product)
+
+  <div class="one_third_shadow">
+    <div class="view_view-first">
+          <div class="product">
+              <div class="product-name">{{ $product->name_product}}</div>
+              <div class="product-description">{{ $product->description}}</div>
+
+              <h3>Pret:</h3>
+              <div class="product-price">{{ $product->price}}</div>
+              <div class="product-category">{{ $product->category}}</div>
+              <div class="product-photo"><img src="{{asset('/images/Products'.($product->photo))}}" alt="product"></div>
+          </div><br>
+          </div>
+          <!-- view ends here --> 
+        </div>
+        <!--end one_third-->
+        @endforeach
 </div>
 <!-- container ends here --> 
-
 
 <!-- Socialize ==================================================
 ================================================== -->
@@ -221,8 +123,15 @@
 </div>
 
 <!-- Footer -->
-<div class="footer">
-  <div class="container">
+<!-- four columns ends here -->
+    <div class="footer">
+
+    <div class="container1">
+    <div class="one_fourth">
+
+    <img src="images/zebra.jpg" class="zebra" alt="" />
+    </div>
+
     <div class="one_fourth">
       <h3><a href="contact">Contact Informations</a></h3>
       <p style="color:white;"><span class="orange"><strong>Address:</strong></span> <br>
@@ -231,17 +140,8 @@
         +40 728 790 182<br>
       </p>
       <p style="color:white;"><span class="orange"><strong>Email:</strong></span> <br>
-        ana_iancu97@yahoo.com<br>
+        thelazyunicorn97@gmail.com<br>
       </p>
-    </div>
-    <!-- four columns ends here -->
-    <div class="one_fourth">
-      <h3><a href="products">Products</a></h3>
-      <ul>
-        <li><a href="products" title="">Gifts</a></li>
-        <li><a href="products" class="">Love</a></li>
-        <li><a href="products" class="">Events</a></li>
-      </ul>
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth">

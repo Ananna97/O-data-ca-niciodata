@@ -11,9 +11,10 @@
 
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/skeleton2.css">
 <link rel="stylesheet" href="css/screen.css">
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/slideshow.css">
+<link rel="stylesheet" href="css/slideshow_home.css">
 
 <!-- Icons -->
 
@@ -38,10 +39,11 @@
         <ul class="sf-menu">
           <li><a href="/index" style="color: red" id="visited">Home</a></li>
           <li><a href="/about" style="color: orange">About</a></li>
-          <li><a href="/products" style="color: yellow">Products</a>
+          <li><a href="/shop" style="color: yellow">Products</a>
           </li>
           <li><a href="/promotions" style="color: green">Promotions</a></li>
           <li><a href="/contact" style="color: blue">Contact</a></li>
+          <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
         </ul>
       </div>
 
@@ -55,6 +57,7 @@
           <option value="/products">Products</option>
           <option value="/promotions">Promotions</option>
           <option value="/contact">Contact</option>
+          <option value="/cart">Shopping Cart</option>
         </select>
       </form>
     </div>
@@ -67,7 +70,7 @@
 
 <div class="slideshow-container">
 
-  <a href="products">
+  <a href="shop">
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
       <img src="images/Cover/Cover1.jpg" style="width:100%">
@@ -115,8 +118,15 @@
 </div>
 
 <!-- Footer -->
-<div class="footer">
-  <div class="container">
+<!-- four columns ends here -->
+    <div class="footer">
+
+    <div class="container1">
+    <div class="one_fourth">
+
+    <img src="images/zebra.jpg" class="zebra" alt="" />
+    </div>
+
     <div class="one_fourth">
       <h3><a href="contact">Contact Informations</a></h3>
       <p style="color:white;"><span class="orange"><strong>Address:</strong></span> <br>
@@ -125,17 +135,8 @@
         +40 728 790 182<br>
       </p>
       <p style="color:white;"><span class="orange"><strong>Email:</strong></span> <br>
-        ana_iancu97@yahoo.com<br>
+        thelazyunicorn97@gmail.com<br>
       </p>
-    </div>
-    <!-- four columns ends here -->
-    <div class="one_fourth">
-      <h3><a href="products">Products</a></h3>
-      <ul>
-        <li><a href="products" title="">Gifts</a></li>
-        <li><a href="products" class="">Love</a></li>
-        <li><a href="products" class="">Events</a></li>
-      </ul>
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth">

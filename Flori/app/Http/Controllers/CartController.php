@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Validation\Request;
 
-class ProductsController extends Controller
+class CartController extends Controller
 {
-
     public function create()
     {
-    	return view('products');
+    	return view('cart');
     }
 }

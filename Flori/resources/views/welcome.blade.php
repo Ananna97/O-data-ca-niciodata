@@ -11,6 +11,7 @@
 
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/skeleton2.css">
 <link rel="stylesheet" href="css/screen.css">
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/slideshow.css">
@@ -42,6 +43,7 @@
           </li>
           <li><a href="/promotions" style="color: green">Promotions</a></li>
           <li><a href="/contact" style="color: blue">Contact</a></li>
+          <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
         </ul>
       </div>
 
@@ -50,11 +52,12 @@
       <form id="responsive-menu" action="#" method="post">
         <select>
           <option value="">Navigation</option>
-          <option value="index.html">Home</option>
-          <option value="about.html">About</option>
-          <option value="products.html">Products</option>
-          <option value="promotions.html">Promotions</option>
-          <option value="contact.html">Contact</option>
+          <option value="/index">Home</option>
+          <option value="/about">About</option>
+          <option value="/products">Products</option>
+          <option value="/promotions">Promotions</option>
+          <option value="/contact">Contact</option>
+          <option value="/cart">Shopping Cart</option>
         </select>
       </form>
     </div>
@@ -115,27 +118,25 @@
 </div>
 
 <!-- Footer -->
-<div class="footer">
-  <div class="container">
+<!-- four columns ends here -->
+    <div class="footer">
+
+    <div class="container1">
     <div class="one_fourth">
-      <h3><a href="contact.html">Contact Informations</a></h3>
+
+    <img src="images/zebra.jpg" class="zebra" alt="" />
+    </div>
+
+    <div class="one_fourth">
+      <h3><a href="contact">Contact Informations</a></h3>
       <p style="color:white;"><span class="orange"><strong>Address:</strong></span> <br>
         Romania, Bucharest, Sector 1</p>
       <p style="color:white;"><span class="orange"><strong>Phone:</strong></span> <br>
         +40 728 790 182<br>
       </p>
       <p style="color:white;"><span class="orange"><strong>Email:</strong></span> <br>
-        ana_iancu97@yahoo.com<br>
+        thelazyunicorn97@gmail.com<br>
       </p>
-    </div>
-    <!-- four columns ends here -->
-    <div class="one_fourth">
-      <h3><a href="products.html">Products</a></h3>
-      <ul>
-        <li><a href="products.html" title="">Gifts</a></li>
-        <li><a href="products.html" class="">Love</a></li>
-        <li><a href="products.html" class="">Events</a></li>
-      </ul>
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth">
