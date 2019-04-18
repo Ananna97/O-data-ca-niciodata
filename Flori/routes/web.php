@@ -42,3 +42,8 @@ Route::get('/cart', [
 	'uses' => 'CartController@create'
 ]);
 
+
+//Login
+
+Route::view('/login', 'login');
+
