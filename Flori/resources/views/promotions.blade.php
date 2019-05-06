@@ -66,10 +66,68 @@
 
 </div>
 
-<!--Promotions-->
+<!-- Slider -->
 
-<div class="slider">
-  <div class="slider-row"></div>
+<div class="slideshow-container">
+
+  <a href="shop">
+    <div class="mySlides fade">
+      <img src="images/Promotions/P1.jpg" style="width:100%">
+    </div>
+  </a>
+
+  <a href="shop">
+    <div class="mySlides fade">
+      <img  src="images/Promotions/P3.jpg" style="width:100%">
+    </div>
+  </a>
+
+  <a href="shop">
+    <div class="mySlides fade">
+      <img src="images/Promotions/P4.jpg" style="width:100%">
+  </div>
+  </a>
+  <a href="shop">
+    <div class="mySlides fade">
+      <img src="images/Promotions/P5.jpg" style="width:100%">
+    </div>
+  </a>
+
+  <a href="shop">
+    <div class="mySlides fade">
+      <img  src="images/Promotions/P6.jpg" style="width:100%">
+    </div>
+  </a>
+
+  <a href="shop">
+    <div class="mySlides fade">
+      <img src="images/Promotions/P7.jpg" style="width:100%">
+  </div>
+  </a>
+  <a href="shop">
+    <div class="mySlides fade">
+      <img src="images/Promotions/P8.jpg" style="width:100%">
+    </div>
+  </a>
+
+  <a href="shop">
+    <div class="mySlides fade">
+      <img  src="images/Promotions/P9.jpg" style="width:100%">
+    </div>
+  </a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
 </div>
 
 <!-- Socialize ==================================================
@@ -131,19 +189,16 @@
   <!-- container ends here --> 
 </div>
 
-<!-- Copyright ==================================================
-================================================== -->
+
+
+<!-- Copyright -->
 <div id="copyright">
   <div class="container">
     <p class="copyright">&copy; Copyright 2019. All rights reserved.</p>
   </div>
-  <!-- container ends here --> 
+
 </div>
-<!-- copyright ends here --> 
-<!-- End Document
-================================================== --> 
-<!-- Scripts ==================================================
-================================================== --> 
+<!-- Scripts  --> 
 <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script> 
 <!-- Main js files --> 
 <script src="js/screen.js" type="text/javascript"></script> 
@@ -154,9 +209,10 @@
 <!-- Include Superfish --> 
 <script src="js/superfish.js" type="text/javascript"></script> 
 <script src="js/hoverIntent.js" type="text/javascript"></script> 
-<!-- Flexslider --> 
-<script src="js/jquery.flexslider-min.js" type="text/javascript"></script> 
+
 <!-- Modernizr --> 
 <script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
+
+<script src="js/slideshow.js" type="text/javascript"></script> 
 </body>
 </html>

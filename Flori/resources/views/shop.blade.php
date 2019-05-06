@@ -24,6 +24,63 @@
 
 <!-- Google Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+
+
+<style>
+      /* Table container */
+      #p-table {
+        max-width: 500px;
+        width: 50%;
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+      /* Product items */
+      #p-table td {
+        width: 33%;
+        height: 7%;
+      }
+      div.p-cell {
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        background: #f2f2f2;
+      }
+      img.p-img {
+        width: 70%;
+        height: auto;
+      }
+      div.p-name {
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+      div.p-price {
+        color: #f44242;
+      }
+      div.p-categ {
+        color: #888;
+        font-size: 0.9em;
+      }
+      button.p-add {
+        background: #f46b41;
+        color: #fff;
+        border: none;
+        width: 50%;
+        padding: 10px;
+        margin: 10px 5px 5px 5px;
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      /* [DOES NOT MATTER] */
+      html, body {
+        padding: 0;
+        margin: 0;
+        font-family: arial, sans-serif;
+      }
+    </style>
+
 </head>
 <body>
 
@@ -83,27 +140,20 @@
 
 <!--Products-->
 
-<div class="container_portfolio">
+<table id="p-table">
         @foreach ($products as $product)
-
-  <div class="one_third_shadow">
-    <div class="view_view-first">
-          <div class="product">
-              <div class="product-name">{{ $product->name_product}}</div>
-              <div class="product-description">{{ $product->description}}</div>
-
-              <h3>Pret:</h3>
-              <div class="product-price">{{ $product->price}}</div>
-              <div class="product-category">{{ $product->category}}</div>
-              <div class="product-photo"><img src="{{asset('/images/Products'.($product->photo))}}" alt="product"></div>
-          </div><br>
-          </div>
-          <!-- view ends here --> 
-        </div>
-        <!--end one_third-->
+      <tr>
+        <td><div class="p-cell">
+          <img class="p-img" src="{{asset('/images/Products'.($product->photo))}}" alt="product"/>
+          <div class="p-name">{{ $product->name_product}}</div>
+          <div class="p-price">{{ $product->price}}</div>
+          <div class="p-categ">{{ $product->category}}</div>
+          <button class="p-add">Add to Cart</button>
+        </div></td>
+      </tr>
         @endforeach
-</div>
-<!-- container ends here --> 
+    </table>
+
 
 <!-- Socialize ==================================================
 ================================================== -->

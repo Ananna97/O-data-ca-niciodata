@@ -1,24 +1,68 @@
-$img-w: 5912px;
-$img-h: 389px;
-$shrink: 2;
-$ratio: 1 / $shrink;
-$speed: 50s;
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {
+  display: none; 
+  border:3px double black;
+}
+img {vertical-align: middle;}
 
-.slider {
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
   position: absolute;
-  width: 100%;
-  top: calc(50% - #{$img-h * $ratio / 2});
-  overflow: hidden;
-  .slider-row {
-    width: $img-w * $ratio;
-    height: $img-h * $ratio;
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/111863/ubiquity-summit-web-01.png);
-    background-size: $img-w * $ratio $img-h * $ratio;
-    animation: slide $speed linear infinite;    
-  }
+  top: 0;
 }
 
-@keyframes slide {
-  from { background-position-x: 0; }
-  to   { background-position-x: -$img-w * $ratio; }
+/* The dots/bullets/indicators */
+.dot {
+  margin-top: 30px;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 2s ease;
 }
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
