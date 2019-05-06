@@ -53,7 +53,7 @@
           <option value="">Navigation</option>
           <option value="/index">Home</option>
           <option value="/about">About</option>
-          <option value="/products">Products</option>
+          <option value="/shop">Products</option>
           <option value="/promotions">Promotions</option>
           <option value="/contact">Contact</option>
           <option value="/cart">Shopping Cart</option>

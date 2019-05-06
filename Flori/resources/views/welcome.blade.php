@@ -39,7 +39,7 @@
         <ul class="sf-menu">
           <li><a href="/index" style="color: red" id="visited">Home</a></li>
           <li><a href="/about" style="color: orange">About</a></li>
-          <li><a href="/products" style="color: yellow">Products</a>
+          <li><a href="/shop" style="color: yellow">Products</a>
           </li>
           <li><a href="/promotions" style="color: green">Promotions</a></li>
           <li><a href="/contact" style="color: blue">Contact</a></li>
@@ -54,7 +54,7 @@
           <option value="">Navigation</option>
           <option value="/index">Home</option>
           <option value="/about">About</option>
-          <option value="/products">Products</option>
+          <option value="/shop">Products</option>
           <option value="/promotions">Promotions</option>
           <option value="/contact">Contact</option>
           <option value="/cart">Shopping Cart</option>
