@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2019 at 11:29 PM
+-- Generation Time: May 07, 2019 at 11:32 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -21,6 +21,59 @@ SET time_zone = "+00:00";
 --
 -- Database: `flower_shop`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(3, '2019_04_16_025052_create_products_table', 3),
+(7, '2019_04_18_002336_create_users_table', 7),
+(8, '2019_04_18_002420_create_order_products_table', 8);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_products`
+--
+
+CREATE TABLE `order_products` (
+  `order_id` int(10) UNSIGNED NOT NULL,
+  `CNP` bigint(20) UNSIGNED DEFAULT NULL,
+  `id_product` bigint(20) UNSIGNED DEFAULT NULL,
+  `quantity` int(10) UNSIGNED NOT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `city` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `county` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `postal_code` double(8,2) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `order_products`
+--
+
+INSERT INTO `order_products` (`order_id`, `CNP`, `id_product`, `quantity`, `address`, `city`, `county`, `postal_code`, `created_at`, `updated_at`) VALUES
+(1, 2940521430997, 10001, 3, 'Romanitei, nr.47', 'Prahova', 'Campina', 105600.00, '2019-04-17 22:15:16', '2019-04-17 22:15:16'),
+(2, 2960227357879, 40005, 1, 'Aleea Migdalelor, nr.5', 'Bucuresti', 'Bucuresti', 222444.00, '2019-04-17 22:15:16', '2019-04-17 22:15:16'),
+(3, 1951214519263, 60006, 2, 'Baiului, nr.7', 'Alba-Iulia', 'Alba', 234345.00, '2019-04-17 22:15:16', '2019-04-17 22:15:16'),
+(4, 1951214519263, 60005, 3, 'Baiului, nr.7', 'Alba-Iulia', 'Alba', 234345.00, '2019-04-17 22:15:16', '2019-04-17 22:15:16'),
+(5, 1910527384590, 10001, 1, 'Castelului, nr.14', 'Bucuresti', 'Bucuresti', 189101.00, '2019-04-17 22:15:16', '2019-04-17 22:15:16'),
+(6, 2960227357879, 60002, 7, 'Aleea Migdalelor, nr.5', 'Bucuresti', 'Bucuresti', 222444.00, '2019-04-17 22:15:16', '2019-04-17 22:15:16'),
+(7, 2940521430997, 50003, 2, 'Romanitei, nr.47', 'Prahova', 'Campina', 105600.00, '2019-04-17 22:15:16', '2019-04-17 22:15:16');
 
 -- --------------------------------------------------------
 
@@ -83,9 +136,53 @@ INSERT INTO `products` (`id_product`, `name_product`, `slug`, `description`, `pr
 (60009, 'Iris', 'iri', 'Iris', 6.00, 'Custom', '/CUSTOM/C9.png', '2019-04-15 23:51:28', '2019-04-15 23:51:28'),
 (60010, 'Alstromeria', 'als', 'Alstromeria', 6.00, 'Custom', '/CUSTOM/C10.png', '2019-04-15 23:51:28', '2019-04-15 23:51:28');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `CNP` bigint(20) UNSIGNED NOT NULL,
+  `first_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `last-name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `telephone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `submit_check` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`CNP`, `first_name`, `last-name`, `username`, `email`, `password`, `telephone`, `submit_check`, `created_at`, `updated_at`) VALUES
+(1910527384590, 'Alexandru', 'Crisan', 'crtyalex12', 'uiiuiuhuhui@yahoo.com', 'crisal123', '0755544312', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
+(1951214519263, 'Ion', 'Petrescu', 'ion123', 'Ion.Petrescu@yahoo.com', 'ion123', '0711223344', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
+(2940521430997, 'Clara', 'Caramitru', 'clara12', 'Caramitru.Clara@yahoo.com', 'claral123', '0733367589', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
+(2960227357879, 'Cristina', 'Stanescu', 'crtinas123', 'Stanescu.Cristina@yahoo.com', 'cristinal123', '0787654321', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_products`
+--
+ALTER TABLE `order_products`
+  ADD PRIMARY KEY (`order_id`),
+  ADD UNIQUE KEY `order_products_order_id_unique` (`order_id`),
+  ADD KEY `order_products_cnp_foreign` (`CNP`),
+  ADD KEY `order_products_id_product_foreign` (`id_product`);
 
 --
 -- Indexes for table `products`
@@ -96,14 +193,52 @@ ALTER TABLE `products`
   ADD UNIQUE KEY `slug_id` (`slug`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`CNP`),
+  ADD UNIQUE KEY `users_cnp_unique` (`CNP`),
+  ADD UNIQUE KEY `users_username_unique` (`username`),
+  ADD UNIQUE KEY `users_email_unique` (`email`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `order_products`
+--
+ALTER TABLE `order_products`
+  MODIFY `order_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id_product` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60011;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `CNP` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2147483647;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `order_products`
+--
+ALTER TABLE `order_products`
+  ADD CONSTRAINT `order_products_cnp_foreign` FOREIGN KEY (`CNP`) REFERENCES `users` (`CNP`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `order_products_id_product_foreign` FOREIGN KEY (`id_product`) REFERENCES `products` (`id_product`) ON DELETE SET NULL ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
