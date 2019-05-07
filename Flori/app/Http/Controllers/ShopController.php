@@ -12,4 +12,10 @@ class ShopController extends Controller
     	$products = Product::inRandomOrder()->take(12)->get();
     	return view('shop')->with('products', $products);
     }
+
+     public function show($slug)
+    {
+        $product = Product::where('slug', $slug)->firstOrFail();
+        return view('product')->with('product',$product);
+    }
 }

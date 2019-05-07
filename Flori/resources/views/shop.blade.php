@@ -144,8 +144,8 @@
         @foreach ($products as $product)
       <tr>
         <td><div class="p-cell">
-          <img class="p-img" src="{{asset('/images/Products'.($product->photo))}}" alt="product"/>
-          <div class="p-name">{{ $product->name_product}}</div>
+          <a href="{{ route('shop.show', $product->slug) }}"><img class="p-img" src="{{asset('/images/Products'.($product->photo))}}" alt="product"/></a>
+          <a href="{{ route('shop.show', $product->slug) }}"><div class="p-name">{{ $product->name_product}}</div></a>
           <div class="p-price">{{ $product->price}}</div>
           <div class="p-categ">{{ $product->category}}</div>
           <button class="p-add">Add to Cart</button>

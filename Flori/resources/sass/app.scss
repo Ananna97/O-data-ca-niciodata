@@ -12,3 +12,13 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+// Pages
+@import 'pages/index';
+@import 'pages/about';
+@import 'pages/product';
+@import 'pages/cart';
+@import 'pages/contact';
+@import 'pages/promotions';
+@import 'pages/shop';
+@import 'pages/login';

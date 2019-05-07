@@ -19,10 +19,12 @@ Route::view('/about', 'about');
 
 //Route::view('/products', 'products');
 
-Route::get('/shop', 'ShopController@index')->name('shop');
+Route::get('/shop', 'ShopController@index')->name('shop.index');
+Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
 Route::view('/promotions', 'promotions');
 
+Route::view('/product', 'product');
 
 
 Route::get('/contact', [
