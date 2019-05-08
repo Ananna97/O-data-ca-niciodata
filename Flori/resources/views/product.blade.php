@@ -127,6 +127,33 @@
           </li>
           <li><a href="/promotions" style="color: green">Promotions</a></li>
           <li><a href="/contact" style="color: blue" id="visited">Contact</a></li>
+           @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}" >Sign Up</a>
+                    </li>
+                    
+                @endif
+            @else
+                <li class="nav-item dropdown">
+                    
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest
           <li><a href="/cart"><img src="../images/cart.png" style="width:35px"></a></li>
         </ul>
       </div>

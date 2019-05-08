@@ -47,5 +47,7 @@ Route::get('/cart', [
 
 //Login
 
-Route::view('/login', 'login');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
