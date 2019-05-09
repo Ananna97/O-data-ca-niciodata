@@ -54,5 +54,5 @@ Route::get('/cart', [
     Route::post('/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
 
 // Sign Up Routes...
-    Route::get('/signup', ['as' => 'signup', 'uses' => 'Auth\SignupController@showRegistrationForm']);
-    Route::post('/signup', ['as' => 'signup.post', 'uses' => 'Auth\SignupController@register']);
+    Route::get('/signup', ['as' => 'signup', 'uses' => 'Auth\RegisterController@showRegistrationForm']);
+    Route::post('/signup', ['as' => 'signup.post', 'uses' => 'Auth\RegisterController@register']);

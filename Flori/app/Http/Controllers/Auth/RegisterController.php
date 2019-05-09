@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 
-class SignupController extends Controller
+class RegisterController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
