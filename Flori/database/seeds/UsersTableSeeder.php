@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     {
         
         User::create([
-            'CNP'=>'1910527384590',
+            'user_id'=>'1',
             'first_name'=>'Alexandru', 
             'last-name'=>'Crisan', 
             'username'=>'crtyalex12',
@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         User::create([
-            'CNP'=>'1951214519263', 
+            'user_id'=>'2', 
             'first_name'=>'Ion',
             'last-name'=>'Petrescu', 
             'username'=>'ion123',
@@ -36,7 +36,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         User::create([
-            'CNP'=>'2940521430997',
+            'user_id'=>'3',
             'first_name'=>'Clara', 
             'last-name'=>'Caramitru', 
             'username'=>'clara12',
@@ -47,7 +47,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         User::create([
-            'CNP'=>'2960227357879',
+            'user_id'=>'4',
             'first_name'=>'Cristina', 
             'last-name'=>'Stanescu', 
             'username'=>'crtinas123',

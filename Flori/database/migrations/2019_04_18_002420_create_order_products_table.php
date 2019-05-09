@@ -16,8 +16,8 @@ class CreateOrderProductsTable extends Migration
         Schema::create('order_products', function (Blueprint $table) {
             $table->increments('order_id')->unique();
 
-             $table->bigInteger('CNP')->unsigned()->nullable();
-            $table->foreign('CNP')->references('CNP')->on('users')
+             $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('user_id')->on('users')
                   ->onUpdate('cascade')->onDelete('set null');
 
             $table->bigInteger('id_product')->unsigned()->nullable();

@@ -13,7 +13,7 @@ class OrderProductsTableSeeder extends Seeder
     public function run()
     {
         OrderProduct::create([
-        	'CNP'=>'2940521430997',
+        	'user_id'=>'3',
             'id_product' => '10001',
             'quantity'=>3, 
             'address'=>'Romanitei, nr.47', 
@@ -23,7 +23,7 @@ class OrderProductsTableSeeder extends Seeder
         ]);
 
         OrderProduct::create([
-        	'CNP'=>'2960227357879',
+        	'user_id'=>'4',
             'id_product' => '40005',
             'quantity'=>1, 
             'address'=>'Aleea Migdalelor, nr.5', 
@@ -33,7 +33,7 @@ class OrderProductsTableSeeder extends Seeder
         ]);
 
         OrderProduct::create([
-        	'CNP'=>'1951214519263',
+        	'user_id'=>'2',
             'id_product' => '60006',
             'quantity'=>2, 
             'address'=>'Baiului, nr.7', 
@@ -43,7 +43,7 @@ class OrderProductsTableSeeder extends Seeder
         ]);
 
         OrderProduct::create([
-        	'CNP'=>'1951214519263',
+        	'user_id'=>'2',
             'id_product' => '60005',
             'quantity'=>3, 
             'address'=>'Baiului, nr.7', 
@@ -53,7 +53,7 @@ class OrderProductsTableSeeder extends Seeder
         ]);
 
         OrderProduct::create([
-        	'CNP'=>'1910527384590',
+        	'user_id'=>'1',
             'id_product' => '10001',
             'quantity'=>1, 
             'address'=>'Castelului, nr.14', 
@@ -63,7 +63,7 @@ class OrderProductsTableSeeder extends Seeder
         ]);
 
         OrderProduct::create([
-        	'CNP'=>'2960227357879',
+        	'user_id'=>'4',
             'id_product' => '60002',
             'quantity'=>7, 
             'address'=>'Aleea Migdalelor, nr.5', 
@@ -73,7 +73,7 @@ class OrderProductsTableSeeder extends Seeder
         ]);
 
         OrderProduct::create([
-        	'CNP'=>'2940521430997',
+        	'user_id'=>'3',
             'id_product' => '50003',
             'quantity'=>2, 
             'address'=>'Romanitei, nr.47', 
