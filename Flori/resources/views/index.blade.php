@@ -43,13 +43,13 @@
           </li>
           <li><a href="/promotions" style="color: green">Promotions</a></li>
           <li><a href="/contact" style="color: blue">Contact</a></li>
-           @guest
+          @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
-                @if (Route::has('register'))
+                @if (Route::has('signup'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}" >Sign Up</a>
+                        <a class="nav-link" href="{{ route('signup') }}" >Sign Up</a>
                     </li>
                     
                 @endif

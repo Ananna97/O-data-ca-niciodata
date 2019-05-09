@@ -48,6 +48,11 @@ Route::get('/cart', [
 //Login
 
 
-Auth::routes();
+// Login Routes...
+    Route::get('/login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
+    Route::post('/login', ['as' => 'login.post', 'uses' => 'Auth\LoginController@login']);
+    Route::post('/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
 
-Route::get('/home', 'HomeController@index');
+// Sign Up Routes...
+    Route::get('/signup', ['as' => 'signup', 'uses' => 'Auth\SignupController@showSignUpForm']);
+    Route::post('/signup', ['as' => 'signup.post', 'uses' => 'Auth\SignupController@SignUp']);

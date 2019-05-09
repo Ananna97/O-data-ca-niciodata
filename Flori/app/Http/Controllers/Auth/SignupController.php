@@ -6,10 +6,10 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Foundation\Auth\SignUpUsers;
 
 
-class RegisterController extends Controller
+class SignupController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+    use SignUpUsers;
 
     /**
      * Where to redirect users after registration.
@@ -50,7 +50,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'cnp' => ['required', 'integer', 'digits:13','unique:users'],
+            
             'name' => ['required', 'string', 'max:255'],
             'name2' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -72,7 +72,7 @@ class RegisterController extends Controller
     {
         return User::create([
 
-            'cnp' => $data['cnp'],
+            
             'first_name' => $data['name'],
             'last-name' => $data['name2'],
             'username' => $data['username'],

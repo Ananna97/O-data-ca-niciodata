@@ -11,22 +11,10 @@
 
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('signup') }}">
                         @csrf
 
-                         <div class="form-group row">
-                            <label for="cnp" class="col-md-4 col-form-label text-md-right">{{ __('CNP') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="cnp" type="text" class="form-control{{ $errors->has('cnp') ? ' is-invalid' : '' }}" name="cnp" value="{{ old('CNP') }}" required autofocus>
-
-                                @if ($errors->has('cnp'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('cnp') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                         
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>

@@ -11,12 +11,12 @@ class User extends Authenticatable
    
     use Notifiable;
 
-    protected $primaryKey = 'cnp';
+    protected $primaryKey = 'username';
 
     protected $table = "users";
     
     protected $fillable = [
-        'first_name', 'last-name' , 'username', 'email', 'password', 'telephone'
+        'first_name', 'last-name' , 'username', 'email', 'password', 'telephone','id'
     ];
  
 }
