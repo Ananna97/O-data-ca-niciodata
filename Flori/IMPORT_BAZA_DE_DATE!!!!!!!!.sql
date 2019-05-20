@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2019 at 11:05 PM
+-- Generation Time: May 17, 2019 at 10:30 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -160,10 +160,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `first_name`, `last-name`, `username`, `email`, `password`, `telephone`, `submit_check`, `created_at`, `updated_at`) VALUES
-(1, 'Alexandru', 'Crisan', 'crtyalex12', 'uiiuiuhuhui@yahoo.com', 'crisal123', '0755544312', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
-(2, 'Ion', 'Petrescu', 'ion123', 'Ion.Petrescu@yahoo.com', 'ion123', '0711223344', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
-(3, 'Clara', 'Caramitru', 'clara12', 'Caramitru.Clara@yahoo.com', 'claral123', '0733367589', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
-(4, 'Cristina', 'Stanescu', 'crtinas123', 'Stanescu.Cristina@yahoo.com', 'cristinal123', '0787654321', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29');
+(1, 'Alexandru', 'Crisan', 'crtyalex12', 'uiiuiuhuhui@yahoo.com', '$2y$10$WQKCk/.0OjHqAOnXWAtu/eLfqsB1ZNGdTiCkqOluPLqI58PkhpddS', '0755544312', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
+(2, 'Ion', 'Petrescu', 'ion123', 'Ion.Petrescu@yahoo.com', '$2y$10$lUOrtM4GSOP.fwsTDxF20ONasxFYvCQCyTdHi940pRkWO5wSFKlI2', '0711223344', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
+(3, 'Clara', 'Caramitru', 'clara12', 'Caramitru.Clara@yahoo.com', '$2y$10$XYCq9sHsPmibEyU4wMc5uOGn6q9/EykvqJGjJo4XRfJMcd4W1gpj.', '0733367589', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
+(4, 'Cristina', 'Stanescu', 'crtinas123', 'Stanescu.Cristina@yahoo.com', '$2y$10$cSR6mWJa1R9vvHIcwDVzFu0GQHtBZKjh07nhZQctTNaAqNozaT/Ya', '0787654321', '1', '2019-04-17 21:33:29', '2019-04-17 21:33:29'),
+(6, 'Bau', 'Bau', 'baubau666', 'baubau6@yahoo.com', '$2y$10$cSR6mWJa1R9vvHIcwDVzFu0GQHtBZKjh07nhZQctTNaAqNozaT/Ya', '0789679678', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -197,7 +198,6 @@ ALTER TABLE `products`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`),
-  ADD UNIQUE KEY `users_cnp_unique` (`user_id`),
   ADD UNIQUE KEY `users_username_unique` (`username`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
@@ -227,7 +227,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
@@ -237,13 +237,8 @@ ALTER TABLE `users`
 -- Constraints for table `order_products`
 --
 ALTER TABLE `order_products`
-  ADD CONSTRAINT `order_products_id_product_foreign` FOREIGN KEY (`id_product`) REFERENCES `products` (`id_product`) ON DELETE SET NULL ON UPDATE CASCADE;
-
---
--- Constraints for table `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `order_products` (`user_id`);
+  ADD CONSTRAINT `order_products_id_product_foreign` FOREIGN KEY (`id_product`) REFERENCES `products` (`id_product`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `order_products_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
