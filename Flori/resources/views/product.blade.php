@@ -220,7 +220,11 @@
     <div class="product-price">
       <span>{{ $product->price }} lei / buc </span>
       
-     <form action="/cart" method="POST">
+     <form action="{{ route('cart.store') }}" method="POST">
+      {{ csrf_field() }}
+      <input type="hidden" name='id_product' value="{{ $product->id_product}}">
+       <input type="hidden" name='name_product' value="{{ $product->name_product}}">
+        <input type="hidden" name='price' value="{{ $product->price}}">
                     <button type="submit" class="cart-butn">Add to Cart</button>
                 </form>
     </div>

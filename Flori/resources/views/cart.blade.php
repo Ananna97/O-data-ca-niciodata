@@ -123,6 +123,8 @@
 </div>
 <!-- contact -->
     <div class="check-out">  
+
+      
     <div class="container">  
    
         <script>$(document).ready(function(c) {
@@ -150,12 +152,35 @@
           });
          </script>  
  <table class="table animated wow fadeInLeft" data-wow-delay=".5s">
+    @if (session()->has('success_message'))
+                <div class="alert alert-success">
+                    {{ session()->get('success_message') }}
+                </div>
+            @endif
+
+            @if(count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            @if( Cart::count() > 0)
+
+
       <tr>
       <th class="t-head head-it ">Item</th>
       <th class="t-head">Price</th>
       <th class="t-head">Quantity</th>
       <th class="t-head">Total</th>
       </tr>
+
+
+
+
       <tr class="cross">
       <td class="ring-in t-data">
         <a href="single.html" class="at-in">
@@ -181,11 +206,15 @@
       <td class="t-data">199,00 lei</td>
       
       </tr>
+
+
+
+
       <tr class="cross1">
       <td class="t-data ring-in"><a href="single.html" class="at-in"><img src="images/pcc2.jpg" class="img-responsive" alt=""></a>
       <div class="sed">
     <img src="images/item-2.png" style="width: 130px"><br><br>
-    <h6>Buchet 7 Trandafiri Rosii</h6>
+    <h6> $item->name_product </h6>
       </div>
       <div class="clearfix"> </div>
       <div class="close2"> </div></td>
@@ -203,6 +232,10 @@
       <td class="t-data">129,00 lei</td>
       
       </tr>
+
+
+
+
       <tr class="cross2">
       <td class="t-data ring-in"><a href="single.html" class="at-in"><img src="images/pcc1.jpg" class="img-responsive" alt=""></a>
       <div class="sed">
@@ -222,9 +255,17 @@
               </div>
             
       </td>
+
+
       <td class="t-data">350,00 lei</td>
       
       </tr>
+
+
+
+
+
+
   </table>
         <div class=" cart-total">
       
@@ -249,8 +290,10 @@
       </div>
       
      </div>
-            
-      
+         
+      @else
+        <h3>No itmes in cart!</h3>
+      @endif
 <br>
 
 

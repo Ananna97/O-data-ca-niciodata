@@ -39,10 +39,12 @@ Route::post('/contact', [
 ]);
 
 
- 
-Route::get('/cart', [
-	'uses' => 'CartController@create'
-]);
+  
+Route::get('/cart', 'CartController@create')->name('cart.create');
+Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::get('empty',function() {
+	Cart::destroy();
+});
 
 
 //Login
