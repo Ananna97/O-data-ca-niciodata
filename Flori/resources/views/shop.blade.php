@@ -177,12 +177,12 @@
           <div class="p-price">{{ $product->price}}</div>
           <div class="p-categ">{{ $product->category}}</div>
           <form action="{{ route('cart.store') }}" method="POST">
-      {{ csrf_field() }}
-      <input type="hidden" name='id_product' value="{{ $product->id_product}}">
-       <input type="hidden" name='name_product' value="{{ $product->name_product}}">
-        <input type="hidden" name='price' value="{{ $product->price}}">
-                    <button type="submit" class="p-add">Add to Cart</button>
-                </form></td>
+            {{ csrf_field() }}
+            <input type="hidden" name='id_product' value="{{ $product->id_product}}">
+             <input type="hidden" name='name_product' value="{{ $product->name_product}}">
+              <input type="hidden" name='price' value="{{ $product->price}}">
+                <button type="submit" class="p-add">Add to Cart</button>
+          </form></td>
       </tr>
         @endforeach
     </table>
