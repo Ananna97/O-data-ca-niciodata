@@ -14,8 +14,6 @@
 <link rel="stylesheet" href="css/skeleton2.css">
 <link rel="stylesheet" href="css/screen.css">
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/slideshow.css">
-<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/style.css">
 
 <!-- Icons -->
@@ -363,22 +361,16 @@
   </div>
 
 </div>
-<!-- Scripts  --> 
-<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script> 
 <!-- Main js files --> 
 <script src="js/screen.js" type="text/javascript"></script> 
 <!-- Tabs --> 
 <script src="js/tabs.js" type="text/javascript"></script> 
 <!-- Include prettyPhoto --> 
 <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script> 
-<!-- Include Superfish --> 
-<script src="js/superfish.js" type="text/javascript"></script> 
-<script src="js/hoverIntent.js" type="text/javascript"></script> 
 
 <!-- Modernizr --> 
 <script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
 
 <script src="js/plus-min-cart.js" type="text/javascript"></script> 
-<script src="js/slideshow.js" type="text/javascript"></script> 
 </body>
 </html>
