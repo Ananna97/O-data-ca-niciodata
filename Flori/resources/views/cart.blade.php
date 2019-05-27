@@ -146,8 +146,8 @@
             });   
           });
          </script>  
- <table class="table animated wow fadeInLeft" data-wow-delay=".5s">
-    @if (session()->has('success_message'))
+
+          @if (session()->has('success_message'))
                 <div class="alert alert-success">
                     {{ session()->get('success_message') }}
                 </div>
@@ -162,9 +162,13 @@
                     </ul>
                 </div>
             @endif
+             @if( Cart::count() > 0)
 
-            @if( Cart::count() > 0)
-
+ <table class="table animated wow fadeInLeft" data-wow-delay=".5s">
+   
+      
+           
+ 
 
       <tr>
       <th class="t-head head-it ">Item</th>
@@ -175,20 +179,21 @@
 
 
 
-
+  @foreach ( Cart::content() as $item)
       <tr class="cross">
       <td class="ring-in t-data">
         <a href="single.html" class="at-in">
           <img src="images/pcc.jpg" class="img-responsive" alt="">
         </a>
       <div class="sed">
-    <img src="images/item-1.png" style="width: 130px"><br><br>
-      <h6>Buchet 11 Trandafiri Albi si Rosii</h6>
+
+    <img src="{{ asset('/images/Products'.$item->model->photo) }}"  style="width: 130px"></a><br><br>
+      <h6>{{ $item->model->name_product}}</h6>
       </div>
         <div class="clearfix"> </div>
         <div class="close1"> </div>
        </td>
-      <td class="t-data">199,00 lei</td>
+      <td class="t-data">{{ $item->model->price}}</td>
       <td class="t-data"><div class="quantity"> 
                 <div class="quantity-select">            
                   <div class="entry value-minus">&nbsp;</div>
@@ -198,65 +203,14 @@
               </div>
       
       </td>
-      <td class="t-data">199,00 lei</td>
+      <td class="t-data">{{ $item->model->price }}</td>
       
       </tr>
 
 
 
 
-      <tr class="cross1">
-      <td class="t-data ring-in"><a href="single.html" class="at-in"><img src="images/pcc2.jpg" class="img-responsive" alt=""></a>
-      <div class="sed">
-    <img src="images/item-2.png" style="width: 130px"><br><br>
-    <h6> $item->name_product </h6>
-      </div>
-      <div class="clearfix"> </div>
-      <div class="close2"> </div></td>
-      <td class="t-data">129,00 lei</td>
-      <td class="t-data"><div class="quantity"> 
-                <div class="quantity-select">            
-                  <div class="entry value-minus">&nbsp;</div>
-                    <div class="entry value"><span class="span-1">1</span></div>                  
-                  <div class="entry value-plus active">&nbsp;</div>
-                </div>
-              </div>
-              <!--quantity-->
-    
-      </td>
-      <td class="t-data">129,00 lei</td>
-      
-      </tr>
-
-
-
-
-      <tr class="cross2">
-      <td class="t-data ring-in"><a href="single.html" class="at-in"><img src="images/pcc1.jpg" class="img-responsive" alt=""></a>
-      <div class="sed">
-    <img src="images/item-3.png" style="width: 130px"><br><br>
-    <h6>Cutie Cadou - 30 de Lalele</h6>
-      </div>
-      <div class="clearfix"> </div>
-      <div class="close3"> </div></td>
-      <td class="t-data">350,00 lei</td>
-      <td class="t-data">
-        <div class="quantity"> 
-                <div class="quantity-select">            
-                  <div class="entry value-minus">&nbsp;</div>
-                    <div class="entry value"><span class="span-1">1</span></div>                  
-                  <div class="entry value-plus active">&nbsp;</div>
-                </div>
-              </div>
-            
-      </td>
-
-
-      <td class="t-data">350,00 lei</td>
-      
-      </tr>
-
-
+      @endforeach
 
 
 
@@ -268,7 +222,7 @@
        <div class="price-details">
          <h3>Price Details</h3>
          <span>Total</span>
-         <span class="total1">678,00 lei</span><br>
+         <span class="total1">{{ Cart::subtotal() }}</span><br>
          <span>Discount</span>
          <span class="total1">---</span><br>
          <span>Delivery Charges</span>
@@ -277,7 +231,7 @@
        </div> 
        <br>
        <ul class="total_price">
-         <li class="last_price"><h4>TOTAL 693,00lei</h4></li>  
+         <li class="last_price"><h4>{{ Cart::subtotal() + 15 }}</h4></li>  
          <li class="last_price"><span></span></li>
          <div class="clearfix"> </div>
        </ul>
@@ -372,5 +326,23 @@
 <script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
 
 <script src="js/plus-min-cart.js" type="text/javascript"></script> 
+
+@section('extra-js')
+  <script src="{{ asset('js/app.js') }}" ></script>
+  <script>
+    (function(){
+       const classname = document.querySelectorAll('.t-data')
+
+
+        Array.from(classname).forEach(function(element) {
+                element.addEventListener('change', function() {
+                  alert('changed');
+                  console.log("changed");
+                })
+
+    })();
+  </script>
+@endsection
+
 </body>
 </html>
