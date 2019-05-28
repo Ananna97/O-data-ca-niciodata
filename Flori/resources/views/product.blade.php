@@ -218,7 +218,7 @@
  
     <!-- Product Pricing -->
     <div class="product-price">
-      <span>{{ $product->price }} lei / buc </span>
+      <span>{{ $product->price }} RON / piece </span>
       
      <form action="{{ route('cart.store') }}" method="POST">
       {{ csrf_field() }}
