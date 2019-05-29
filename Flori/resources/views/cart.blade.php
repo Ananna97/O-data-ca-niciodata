@@ -226,7 +226,7 @@
          <span>Discount</span>
          <span class="total1">---</span><br>
          <span>Delivery Charges</span>
-         <span class="total1">15 lei</span>
+         <span class="total1">15 RON</span>
          <div class="clearfix"></div>        
        </div> 
        <br>
