@@ -4,8 +4,8 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 if(mail($toemail, 'Subject', $message, 'From: ' . $email)) {
-	echo 'Your email was sent successfully.';
+	echo 'Mail-ul a fost trimis cu succes.';
 } else {
-	echo 'There was a problem sending your email.';
+	echo 'A aparut o eroare in trimiterea email-ului.';
 }
 ?>

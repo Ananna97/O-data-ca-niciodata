@@ -36,19 +36,19 @@
     <div class="mainmenu">
       <div id="mainmenu">
         <ul class="sf-menu">
-          <li><a href="index" style="color: red">Home</a></li>
-          <li><a href="about" style="color: orange" id="visited">About</a></li>
-          <li><a href="shop" style="color: yellow">Products</a>
+          <li><a href="/index" style="color: black">Acasa</a></li>
+          <li><a href="/about" style="color: orange" id="visited">Despre noi</a></li>
+          <li><a href="/shop" style="color: black">Magazin</a>
           </li>
-          <li><a href="promotions" style="color: green">Promotions</a></li>
-          <li><a href="contact" style="color: blue">Contact</a></li>
+          <li><a href="/promotions" style="color: black" >Preparate</a></li>
+          <li><a href="/contact" style="color: black">Contact</a></li>
            @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Logare') }}</a>
                 </li>
                 @if (Route::has('signup'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('signup') }}" >Sign Up</a>
+                        <a class="nav-link" href="{{ route('signup') }}" >Autentificare</a>
                     </li>
                     
                 @endif
@@ -60,7 +60,7 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{ __('Delogare') }}
                         </a>
         
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -78,13 +78,13 @@
 
       <form id="responsive-menu" action="#" method="post">
         <select>
-          <option value="">Navigation</option>
-          <option value="/index">Home</option>
-          <option value="/about">About</option>
-          <option value="/shop">Products</option>
-          <option value="/promotions">Promotions</option>
+          <option value="">Meniu</option>
+          <option value="/index">Acasa</option>
+          <option value="/about">Despre noi</option>
+          <option value="/shop">Magazin</option>
+          <option value="/promotions">Preparate</option>
           <option value="/contact">Contact</option>
-          <option value="/cart">Shopping Cart</option>
+          <option value="/cart">Cos de cumparaturi</option>
         </select>
       </form>
     </div>
@@ -99,20 +99,25 @@
 <!--Testimonials ==================================================
 ================================================== -->
   <div class="container">
-      <h2>Flowers, unique items & feelings delivered directly to you!</h2>
+      <h2>POVESTEA NOASTRA . . . </h2>
       <p class="testimonials">
-          Sometimes you don't need a reason to surprise someone. 
-The Lazy Unicorn is the online flower shop at just a click away to help you express yourself by sending flowers to the people you love, you appreciate or respect.
-Our store is the ideal way to send flowers to your loved ones, to purchase floral arrangements for weddings, conferences or any other events. 
-Regardless of the occasion or its significance, from The Lazy Unicorn you can choose the perfect flowers to make the most beautiful surprise.
+          
+A fost odată ca niciodată, că de n-ar fi nu s-ar povesti, un magazin românesc care dorea să crească mare. Și a fost întrebat, de unii și alții, ce vrea să se facă atunci când se va face mare. Iar răspunsul său a fost: un magazin care să ducă mai departe tradiția românească. 
+
+Se spune că un popor fără tradiții este un popor fără viitor.
+
+"Odata ca niciodata" este un magazin de produse tradiționale românești: ceramică și lut, produse din lemn, port tradițional, suveniruri și cadouri pentru suflet. Pentru că degeaba ne uităm cu nostalgie la casa părinților sau a bunicilor, la documentare despre meșteșuguri românești, în loc să încercăm să le aducem mai aproape de noi.
+
+
 
 <br><br><br>
 
-  The Lazy Unicorn guarantees the quality and freshness of its flowers, prompt deliveries and positive feelings at the end.
-Our mission is to provide simple or sophisticated arrangements, with a perfect fragrant, conquerors, arrangements that give a touch of elegance.
-Because at the office you spend most of the day, it is very important to feel comfortable. 
-The Lazy Unicorn can provide daily or whenever you need flower arrangements that constitute your oasis of greenery and pace.  
-  For less happy occasions, you will find at our store funeral arrangements to express your feelings of regret, support and friendship to those who have suffered such losses.
+Pentru că "Odata ca niciodata" și-a dat seama că spiritul românesc va rămâne pururea viu dacă e transmis din generație în generație, iar obiectele sale tradiționale vor servi ca adevărate suveniruri ale spiritului românesc. Mai mult, tradiția românească urma să ajungă și pe alte meleaguri, fiindcă nu doar românii au luat acasă obiectele frumoase din magazin, ci și vizitatorii României – turiștii străini – iubitori la rândul lor de frumos și gată să poarte cu ei pe tărâmuri îndepărtate o fărâmă din frumusețea și talentul românesc.
+
+Pentru că tradiția e cool și niciodată nu-și pierde aerul de autenticitate. Pentru că tradiția spune mai mult decât lasă să se vadă și îmbogățește locul, portul și sufletul. Pentru că tradiția înseamnă calitate și e a noastră și e un motiv de mândrie pentru fiecare dintre noi. 
+
+Împreună înviem tradiția și modelăm viitorul. 
+Fii și tu parte din asta!
       </p>
       <img class="about_image" src="images/testimonials.jpg" alt="testimonials"/> </header>
   </div>
@@ -124,7 +129,7 @@ The Lazy Unicorn can provide daily or whenever you need flower arrangements that
 <div class="container">
   <div class="blankSeparator"></div>
   <div class="container">
-    <h2>Our Team</h2>
+    <h2>Echipa Noastra</h2>
     <div class="team_row">
       <div class="team_column">
         <h3>Ana</h3> 
@@ -132,8 +137,8 @@ The Lazy Unicorn can provide daily or whenever you need flower arrangements that
       </div>
 
       <div class="team_column"> 
-        <h3>Alex</h3>
-        <img class="team_image" src="images/Team/Alex.jpg" alt=""/>
+        <h3>Alex P</h3>
+        <img class="team_image" src="images/Team/AlexP.jpg" alt=""/>
       </div>
 
       <div class="team_column"> 
@@ -142,13 +147,13 @@ The Lazy Unicorn can provide daily or whenever you need flower arrangements that
       </div>
 
       <div class="team_column"> 
-        <h3>Alexandra</h3>
-        <img class="team_image" src="images/Team/Alexandra.jpg" alt=""/>
+        <h3>Anca</h3>
+        <img class="team_image" src="images/Team/Anca.jpg" alt=""/>
       </div>
 
       <div class="team_column"> 
-        <h3>Marian</h3>
-        <img class="team_image" src="images/Team/Marian.jpg" alt=""/>
+        <h3>Alex G</h3>
+        <img class="team_image" src="images/Team/AlexG.jpg" alt=""/>
       </div>
       <!-- end one-third column ends here --> 
     </div>
@@ -162,7 +167,7 @@ The Lazy Unicorn can provide daily or whenever you need flower arrangements that
 <hr class="separator2">
 <div class="socialsblock">
   <div class="container socialize">
-    <h3>Socialize with us!</h3>
+    <h3>Socializeaza cu noi!</h3>
     <section class="socials">
       <ul class="socials">
         <li><a href="https://www.facebook.com/Lazy-Unicorn-403177003801120/?modal=admin_todo_tour"><img src="images/socials/facebook.png" alt="" /></a></li>
@@ -175,9 +180,7 @@ The Lazy Unicorn can provide daily or whenever you need flower arrangements that
 </div>
 
 <!-- Footer -->
-
-
-    <!-- four columns ends here -->
+<!-- four columns ends here -->
     <div class="footer">
 
     <div class="container1">
@@ -187,10 +190,10 @@ The Lazy Unicorn can provide daily or whenever you need flower arrangements that
     </div>
 
     <div class="one_fourth">
-      <h3><a href="contact">Contact Informations</a></h3>
-      <p style="color:white;"><span class="orange"><strong>Address:</strong></span> <br>
+      <h3><a href="contact">Informatii de Contact</a></h3>
+      <p style="color:white;"><span class="orange"><strong>Addresa:</strong></span> <br>
         Romania, Bucharest, Sector 1</p>
-      <p style="color:white;"><span class="orange"><strong>Phone:</strong></span> <br>
+      <p style="color:white;"><span class="orange"><strong>Telefon:</strong></span> <br>
         +40 728 790 182<br>
       </p>
       <p style="color:white;"><span class="orange"><strong>Email:</strong></span> <br>
@@ -199,34 +202,22 @@ The Lazy Unicorn can provide daily or whenever you need flower arrangements that
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth">
-      <h3><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?ref=page_internal">Gallery</a></h3>
+      <h3><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?ref=page_internal">Gallerie</a></h3>
       <ul>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181067134047" class="">Wedding</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181573800663" class="">Birthday</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403182077133946" class="">Valentine's day</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181720467315" class="">Funerals</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403182367133917" class="">Festival</a></li>
+        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181067134047" class="">Sarate</a></li>
+        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181573800663" class="">Dulci</a></li>
+        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403182077133946" class="">Cadouri</a></li>
       </ul>
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth lastcolumn">
-      <h3><a href="about">About</a></h3>
-      <p><a href="about" rel="nofollow">Flower shop online</a></p>
+      <h3><a href="about">Despre noi</a></h3>
+      <p><a href="about" rel="nofollow">Retete online</a></p>
     </div>
     <!-- four columns ends here --> 
   </div>
   <!-- container ends here --> 
 </div>
-
-<!-- Copyright ==================================================
-================================================== -->
-<div id="copyright">
-  <div class="container">
-    <p class="copyright">&copy; Copyright 2019. All rights reserved.</p>
-  </div>
-  <!-- container ends here --> 
-</div>
-<!-- copyright ends here --> 
 <!-- End Document
 ================================================== --> 
 <!-- Scripts ==================================================

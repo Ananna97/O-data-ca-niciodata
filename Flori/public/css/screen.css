@@ -230,7 +230,7 @@ span.pink {
 	border-bottom:1px dashed #c7b3a9;
 }
 .latest figure {
-	background:linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	background:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 	border: 2px solid black;
 	-webkit-border-bottom-right-radius: 5px;
 	-webkit-border-bottom-left-radius: 5px;
@@ -262,7 +262,7 @@ span.pink {
 	height: 0;
 	overflow: hidden;
 	margin-bottom:5px;
-	border: 3px solid linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	border: 3px solid linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 }
 .video-container iframe, .video-container object, .video-container embed {
 	position: absolute;
@@ -322,7 +322,7 @@ p.quote {
 	padding:20px 0px;
 }
 .footer p {
-	color:linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	color:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 	text-shadow:none;
 	font-size:12px;
 }
@@ -339,7 +339,7 @@ p.quote {
 	font-family:  Arial, Helvetica, sans-serif;
 }
 #tweets li a {
-	color:linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	color:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 }
 #tweets p.meta {
 	color:#fff;
@@ -352,10 +352,10 @@ p.quote {
 	border-bottom:0px none;
 }
 #tweets .hash {
-	color:linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	color:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 }
 #tweets .reply {
-	color:linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	color:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 }
 .footer ul li {
 	padding:2px 0;
@@ -376,7 +376,7 @@ ul.socials li {
 	box-shadow: 0 0 18px rgba(0, 0, 0, 0.3) inset;
 }
 .footer ul li a {
-	color:linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	color:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -467,8 +467,8 @@ ul.socials li {
 
 .team_column {
   float: left;
-  width: 32%;
-  padding: 5px;
+  width: 17%;
+  padding: 10px;
 }
 
 .team_row {
@@ -483,7 +483,7 @@ ul.socials li {
 
 .zebra{
 	height: auto;
-	width: 50%;
+	width: 60%;
 	float: right;
 }
 
@@ -658,7 +658,7 @@ ul.tabs li:first-child a.active {
 }
 ul.tabs-content {
 	display: block;
-	background:linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99); ;
+	background:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99); ;
 	padding:20px 10px 5px 10px;
 	border: 2px solid black;
 	-webkit-border-bottom-right-radius: 5px;
@@ -696,7 +696,7 @@ ul.categories li {
 }
 ul.categories li a {
 	display:inline-block;
-	background:linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99); ;
+	background:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99); ;
 	padding:5px;
 	color:black;
 }
@@ -725,7 +725,7 @@ ul.categories li a {
 }
 /* CONTACT FORM */
 form#contact_form input[type="text"] {
-	border: 1px solid linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	border: 1px solid linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 	background-color: white;
 	height: 30px;
 	padding: 0 10px;
@@ -733,7 +733,7 @@ form#contact_form input[type="text"] {
 	margin-bottom:20px;
 }
 form#contact_form input#email {
-	border: 1px solid linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	border: 1px solid linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 	background-color: white;
 	height: 30px;
 	padding: 0 10px;
@@ -741,7 +741,7 @@ form#contact_form input#email {
 	margin-bottom:20px;
 }
 form#contact_form textarea {
-	border: 1px solid linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99);
+	border: 1px solid linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99);
 	background-color: white;
 	width: 500px;
 	margin-bottom:20px;
@@ -756,7 +756,7 @@ form#contact_form input[type="text"]:focus, form#contact_form input[type="text"]
 	background-color:#fff3e4;
 }
 form#contact_form input[type="submit"] {
-	background:#ff9999;
+	background:#7f2686;
 	border: 2px solid black;
 	padding:5px;
 	font-size:11px;
@@ -778,7 +778,7 @@ form#contact_form input[type="submit"] {
 	height:100%;
 }
 .contact .first {
-	background:linear-gradient(#ff9999, #ffa366, #ffff66, #b3ecff, #99ff99); ;
+	background:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99); ;
 	padding:10px;
 	margin-bottom:40px;
 }

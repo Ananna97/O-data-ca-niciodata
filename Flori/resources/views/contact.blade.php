@@ -36,19 +36,19 @@
     <div class="mainmenu">
       <div id="mainmenu">
         <ul class="sf-menu">
-          <li><a href="/index" style="color: red">Home</a></li>
-          <li><a href="/about" style="color: orange">About</a></li>
-          <li><a href="/shop" style="color: yellow">Products</a>
+          <li><a href="/index" style="color: red">Acasa</a></li>
+          <li><a href="/about" style="color: orange">Despre noi</a></li>
+          <li><a href="/shop" style="color: yellow">Magazin</a>
           </li>
-          <li><a href="/promotions" style="color: green">Promotions</a></li>
+          <li><a href="/promotions" style="color: green">Preparate</a></li>
           <li><a href="/contact" style="color: blue" id="visited">Contact</a></li>
            @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Logare') }}</a>
                 </li>
                 @if (Route::has('signup'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('signup') }}" >Sign Up</a>
+                        <a class="nav-link" href="{{ route('signup') }}" >Autentificare</a>
                     </li>
                     
                 @endif
@@ -60,7 +60,7 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{ __('Delogare') }}
                         </a>
         
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -77,13 +77,13 @@
 
       <form id="responsive-menu" action="#" method="post">
         <select>
-          <option value="">Navigation</option>
-          <option value="/index">Home</option>
-          <option value="/about">About</option>
-          <option value="/shop">Products</option>
-          <option value="/promotions">Promotions</option>
+          <option value="">Meniu</option>
+          <option value="/index">Acasa</option>
+          <option value="/about">Despre noi</option>
+          <option value="/shop">Magazin</option>
+          <option value="/promotions">Preparate</option>
           <option value="/contact">Contact</option>
-          <option value="/cart">Shopping Cart</option>
+          <option value="/cart">Cos de cumparaturi</option>
         </select>
       </form>
     </div>
@@ -97,7 +97,7 @@
 <div class="breadcrumbs">
   <div class="container">
     <header>
-      <h3>Contact Page</h3>
+      <h3>Pagina de Contact</h3>
     </header>
   </div>
   <!-- container ends here -->
@@ -124,11 +124,11 @@
   <!-- Contact Sidebar ==================================================
 ================================================== -->
   <div class="one_third">
-    <h3>Our Info</h3>
+    <h3>Informatii</h3>
     <section class="first shadow" style="border: 2px solid black;">
       <ul>
         <li>Romania, Bucharest</li>
-        <li>Phone: +40 728 790 182</li>
+        <li>Telefon: +40 728 790 182</li>
         <li>Website: <a href="#" title="" style="color:black">The Lazy Unicorn</a></li>
         <li>Email: <a href="#" title="" style="color:black">thelazyunicorn97@gmail.com</a></li>
       </ul>
@@ -137,7 +137,7 @@
   <!-- one_third ends here -->
   <div class="two_third lastcolumn contact1">
     <div id="contactForm">
-      <h3>Contact us</h3>
+      <h3>Contacteaza-ne</h3>
       <div class="sepContainer"></div>
 
       <form action="{{ route('contact.store') }}" method="post" id="contact_form">
@@ -145,25 +145,25 @@
         <input type="hidden" name="_token" value="{{ Session::token() }}">
 
         <div class="name">
-          <label for="name">Your Name:</label>
-          <p> Please enter your full name</p>
+          <label for="name">Nume:</label>
+          <p> Numele si prenumele</p>
           <input id=name name=name type=text placeholder="Your Full Name" required />
         </div>
 
         <div class="email">
-          <label for="email">Your Email:</label>
-          <p> Please enter your email address</p>
+          <label for="email">Email:</label>
+          <p> Adresa de email</p>
           <input id=email name=email type=email placeholder="email@email.com" required />
         </div>
 
         <div class="message">
-          <label for="message">Your Message:</label>
-          <p> Please enter your question</p>
+          <label for="message">Messaj:</label>
+          <p> Textul sau mesajul dorit</p>
           <textarea id=message name=message rows=6 cols=10 required></textarea>
         </div>
 
         <div id="loader">
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Trimite" />
         </div>
 
       </form>
@@ -180,7 +180,7 @@
 <hr class="separator2">
 <div class="socialsblock">
   <div class="container socialize">
-    <h3>Socialize with us!</h3>
+    <h3>Socializeaza cu noi!</h3>
     <section class="socials">
       <ul class="socials">
         <li><a href="https://www.facebook.com/Lazy-Unicorn-403177003801120/?modal=admin_todo_tour"><img src="images/socials/facebook.png" alt="" /></a></li>
@@ -203,10 +203,10 @@
     </div>
 
     <div class="one_fourth">
-      <h3><a href="contact">Contact Informations</a></h3>
-      <p style="color:white;"><span class="orange"><strong>Address:</strong></span> <br>
+      <h3><a href="contact">Informatii de Contact</a></h3>
+      <p style="color:white;"><span class="orange"><strong>Addresa:</strong></span> <br>
         Romania, Bucharest, Sector 1</p>
-      <p style="color:white;"><span class="orange"><strong>Phone:</strong></span> <br>
+      <p style="color:white;"><span class="orange"><strong>Telefon:</strong></span> <br>
         +40 728 790 182<br>
       </p>
       <p style="color:white;"><span class="orange"><strong>Email:</strong></span> <br>
@@ -215,34 +215,23 @@
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth">
-      <h3><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?ref=page_internal">Gallery</a></h3>
+      <h3><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?ref=page_internal">Gallerie</a></h3>
       <ul>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181067134047" class="">Wedding</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181573800663" class="">Birthday</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403182077133946" class="">Valentine's day</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181720467315" class="">Funerals</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403182367133917" class="">Festival</a></li>
+        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181067134047" class="">Sarate</a></li>
+        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181573800663" class="">Dulci</a></li>
+        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403182077133946" class="">Cadouri</a></li>
       </ul>
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth lastcolumn">
-      <h3><a href="about">About</a></h3>
-      <p><a href="about" rel="nofollow">Flower shop online</a></p>
+      <h3><a href="about">Despre noi</a></h3>
+      <p><a href="about" rel="nofollow">Retete online</a></p>
     </div>
     <!-- four columns ends here --> 
   </div>
   <!-- container ends here --> 
 </div>
 
-<!-- Copyright ==================================================
-================================================== -->
-<div id="copyright">
-  <div class="container">
-    <p class="copyright">&copy; Copyright 2013. &quot;Freebix&quot; by <a href="http://www.anarieldesign.com/" rel="nofollow">Anariel Design</a>. All rights reserved.</p>
-  </div>
-  <!-- container ends here --> 
-</div>
-<!-- copyright ends here --> 
 <!-- End Document
 ================================================== --> 
 <!-- Scripts ==================================================

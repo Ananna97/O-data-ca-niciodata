@@ -121,12 +121,12 @@
     <div class="mainmenu">
       <div id="mainmenu">
         <ul class="sf-menu">
-          <li><a href="/index" style="color: red">Home</a></li>
-          <li><a href="/about" style="color: orange">About</a></li>
-          <li><a href="/shop" style="color: yellow">Products</a>
+          <li><a href="/index" style="color: black">Acasa</a></li>
+          <li><a href="/about" style="color: black">Despre noi</a></li>
+          <li><a href="/shop" style="color: orange"  id="visited">Magazin</a>
           </li>
-          <li><a href="/promotions" style="color: green">Promotions</a></li>
-          <li><a href="/contact" style="color: blue" id="visited">Contact</a></li>
+          <li><a href="/promotions" style="color: black">Preparate</a></li>
+          <li><a href="/contact" style="color: black">Contact</a></li>
            @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -162,13 +162,13 @@
 
       <form id="responsive-menu" action="#" method="post">
         <select>
-          <option value="">Navigation</option>
-          <option value="/index">Home</option>
-          <option value="/about">About</option>
-          <option value="/shop">Products</option>
-          <option value="/promotions">Promotions</option>
+          <option value="">Meniu</option>
+          <option value="/index">Acasa</option>
+          <option value="/about">Despre noi</option>
+          <option value="/shop">Magazin</option>
+          <option value="/promotions">Preparate</option>
           <option value="/contact">Contact</option>
-          <option value="/cart">Shopping Cart</option>
+          <option value="/cart">Cos de cumparaturi</option>
         </select>
       </form>
     </div>
@@ -239,7 +239,7 @@
 <hr class="separator2">
 <div class="socialsblock">
   <div class="container socialize">
-    <h3>Socialize with us!</h3>
+    <h3>Socializeaza cu noi!</h3>
     <section class="socials">
       <ul class="socials">
         <li><a href="https://www.facebook.com/Lazy-Unicorn-403177003801120/?modal=admin_todo_tour"><img src="../images/socials/facebook.png" alt="" /></a></li>
@@ -258,14 +258,14 @@
     <div class="container1">
     <div class="one_fourth">
 
-    <img src="../images/zebra.jpg" class="zebra" alt="" />
+    <img src="images/zebra.jpg" class="zebra" alt="" />
     </div>
 
     <div class="one_fourth">
-      <h3><a href="contact">Contact Informations</a></h3>
-      <p style="color:white;"><span class="orange"><strong>Address:</strong></span> <br>
+      <h3><a href="contact">Informatii de Contact</a></h3>
+      <p style="color:white;"><span class="orange"><strong>Addresa:</strong></span> <br>
         Romania, Bucharest, Sector 1</p>
-      <p style="color:white;"><span class="orange"><strong>Phone:</strong></span> <br>
+      <p style="color:white;"><span class="orange"><strong>Telefon:</strong></span> <br>
         +40 728 790 182<br>
       </p>
       <p style="color:white;"><span class="orange"><strong>Email:</strong></span> <br>
@@ -274,34 +274,22 @@
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth">
-      <h3><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?ref=page_internal">Gallery</a></h3>
+      <h3><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?ref=page_internal">Gallerie</a></h3>
       <ul>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181067134047" class="">Wedding</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181573800663" class="">Birthday</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403182077133946" class="">Valentine's day</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181720467315" class="">Funerals</a></li>
-        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403182367133917" class="">Festival</a></li>
+        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181067134047" class="">Sarate</a></li>
+        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403181573800663" class="">Dulci</a></li>
+        <li><a href="https://www.facebook.com/pg/Lazy-Unicorn-403177003801120/photos/?tab=album&album_id=403182077133946" class="">Cadouri</a></li>
       </ul>
     </div>
     <!-- four columns ends here -->
     <div class="one_fourth lastcolumn">
-      <h3><a href="about">About</a></h3>
-      <p><a href="about" rel="nofollow">Flower shop online</a></p>
+      <h3><a href="about">Despre noi</a></h3>
+      <p><a href="about" rel="nofollow">Retete online</a></p>
     </div>
     <!-- four columns ends here --> 
   </div>
   <!-- container ends here --> 
 </div>
-
-<!-- Copyright ==================================================
-================================================== -->
-<div id="copyright">
-  <div class="container">
-    <p class="copyright">&copy; Copyright 2013. &quot;Freebix&quot; by <a href="http://www.anarieldesign.com/" rel="nofollow">Anariel Design</a>. All rights reserved.</p>
-  </div>
-  <!-- container ends here --> 
-</div>
-<!-- copyright ends here --> 
 <!-- End Document
 ================================================== --> 
 <!-- Scripts ==================================================

@@ -71,7 +71,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 h1 {
 	font-family: 'Georgia', serif;
 	text-align: center;
-	text-shadow: 2px 2px #f690dc;
+	text-shadow: 2px 2px #7f2686;
 	line-height: 1.0;
 	margin-top: 70px;
 	font-size: 70px;
@@ -79,7 +79,7 @@ h1 {
 }
 h2 {
 	text-align: center;
-	text-shadow: 2px 2px #f690dc;
+	text-shadow: 2px 2px #7f2686;
 	line-height: 1.0;
 	margin-top: 50px;
 	font-size: 50px;
