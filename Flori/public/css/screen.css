@@ -438,7 +438,7 @@ ul.socials li {
 }
 
 .testimonials{
-	background-image: linear-gradient(#fbbfec, white);
+	background:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99); 
 	font-family:'Oswald', serif;
 	font-size:15px;
 	display: block;
@@ -778,7 +778,7 @@ form#contact_form input[type="submit"] {
 	height:100%;
 }
 .contact .first {
-	background:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99); ;
+	background:linear-gradient(#7f2686, #ffa366, #ffff66, #b3ecff, #99ff99); 
 	padding:10px;
 	margin-bottom:40px;
 }

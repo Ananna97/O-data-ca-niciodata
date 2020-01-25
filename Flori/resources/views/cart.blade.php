@@ -14,8 +14,6 @@
 <link rel="stylesheet" href="css/skeleton2.css">
 <link rel="stylesheet" href="css/screen.css">
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/slideshow.css">
-<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/style.css">
 
 <!-- Icons -->
@@ -39,9 +37,6 @@
 <!-- animation-effect -->
 <link href="css/animate.min.css" rel="stylesheet"> 
 <script src="js/wow.min.js"></script>
-<script>
- new WOW().init();
-</script>
 
 </head>
 <body>
@@ -60,7 +55,34 @@
           <li><a href="/shop" style="color: black">Magazin</a>
           </li>
           <li><a href="/promotions" style="color: black">Preparate</a></li>
-          <li><a href="/contact" style="color: black">Contact</a></li>
+          <li><a href="/contact" style="color: black" >Contact</a></li>
+           @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Logare') }}</a>
+                </li>
+                @if (Route::has('signup'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('signup') }}" >Autentificare</a>
+                    </li>
+                    
+                @endif
+            @else
+                <li class="nav-item dropdown">
+                    
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Delogare') }}
+                        </a>
+        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest
           <li><a href="/cart"><img src="images/cart.png" style="width:35px"  id="visited"></a></li>
         </ul>
       </div>
@@ -96,6 +118,8 @@
 </div>
 <!-- contact -->
     <div class="check-out">  
+
+      
     <div class="container">  
    
         <script>$(document).ready(function(c) {
@@ -122,26 +146,54 @@
             });   
           });
          </script>  
+
+          @if (session()->has('success_message'))
+                <div class="alert alert-success">
+                    {{ session()->get('success_message') }}
+                </div>
+            @endif
+
+            @if(count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+             @if( Cart::count() > 0)
+
  <table class="table animated wow fadeInLeft" data-wow-delay=".5s">
+   
+      
+           
+ 
+
       <tr>
       <th class="t-head head-it ">Obiect</th>
       <th class="t-head">Pret</th>
       <th class="t-head">Cantitate</th>
       <th class="t-head">Total</th>
       </tr>
+
+
+
+  @foreach ( Cart::content() as $item)
       <tr class="cross">
       <td class="ring-in t-data">
         <a href="single.html" class="at-in">
           <img src="images/pcc.jpg" class="img-responsive" alt="">
         </a>
       <div class="sed">
-    <img src="images/item-1.png" style="width: 130px"><br><br>
-      <h6>Buchet 11 Trandafiri Albi si Rosii</h6>
+
+    <img src="{{ asset('/images/Products'.$item->model->photo) }}"  style="width: 130px"></a><br><br>
+      <h6>{{ $item->model->name_product}}</h6>
       </div>
         <div class="clearfix"> </div>
         <div class="close1"> </div>
        </td>
-      <td class="t-data">199,00 lei</td>
+      <td class="t-data">{{ $item->model->price}}</td>
       <td class="t-data"><div class="quantity"> 
                 <div class="quantity-select">            
                   <div class="entry value-minus">&nbsp;</div>
@@ -151,70 +203,35 @@
               </div>
       
       </td>
-      <td class="t-data">199,00 lei</td>
+      <td class="t-data">{{ $item->model->price }}</td>
       
       </tr>
-      <tr class="cross1">
-      <td class="t-data ring-in"><a href="single.html" class="at-in"><img src="images/pcc2.jpg" class="img-responsive" alt=""></a>
-      <div class="sed">
-    <img src="images/item-2.png" style="width: 130px"><br><br>
-    <h6>Buchet 7 Trandafiri Rosii</h6>
-      </div>
-      <div class="clearfix"> </div>
-      <div class="close2"> </div></td>
-      <td class="t-data">129,00 lei</td>
-      <td class="t-data"><div class="quantity"> 
-                <div class="quantity-select">            
-                  <div class="entry value-minus">&nbsp;</div>
-                    <div class="entry value"><span class="span-1">1</span></div>                  
-                  <div class="entry value-plus active">&nbsp;</div>
-                </div>
-              </div>
-              <!--quantity-->
-    
-      </td>
-      <td class="t-data">129,00 lei</td>
-      
-      </tr>
-      <tr class="cross2">
-      <td class="t-data ring-in"><a href="single.html" class="at-in"><img src="images/pcc1.jpg" class="img-responsive" alt=""></a>
-      <div class="sed">
-    <img src="images/item-3.png" style="width: 130px"><br><br>
-    <h6>Cutie Cadou - 30 de Lalele</h6>
-      </div>
-      <div class="clearfix"> </div>
-      <div class="close3"> </div></td>
-      <td class="t-data">350,00 lei</td>
-      <td class="t-data">
-        <div class="quantity"> 
-                <div class="quantity-select">            
-                  <div class="entry value-minus">&nbsp;</div>
-                    <div class="entry value"><span class="span-1">1</span></div>                  
-                  <div class="entry value-plus active">&nbsp;</div>
-                </div>
-              </div>
-            
-      </td>
-      <td class="t-data">350,00 lei</td>
-      
-      </tr>
+
+
+
+
+      @endforeach
+
+
+
+
   </table>
         <div class=" cart-total">
       
        <h5 class="continue" >Total Cumparaturi</h5>
        <div class="price-details">
-         <h3>Detalii Pret</h3>
+         <h3>Ddetalii Pret</h3>
          <span>Total</span>
-         <span class="total1">678,00 lei</span><br>
+         <span class="total1">{{ Cart::subtotal() }}</span><br>
          <span>Discount</span>
          <span class="total1">---</span><br>
-         <span>Taxa livrare</span>
+         <span>Taxa de livrare</span>
          <span class="total1">15 lei</span>
          <div class="clearfix"></div>        
        </div> 
        <br>
        <ul class="total_price">
-         <li class="last_price"><h4>TOTAL 693,00lei</h4></li>  
+         <li class="last_price"><h4>{{ Cart::subtotal() + 15 }}</h4></li>  
          <li class="last_price"><span></span></li>
          <div class="clearfix"> </div>
        </ul>
@@ -222,8 +239,10 @@
       </div>
       
      </div>
-            
-      
+         
+      @else
+        <h3>Nu aveti obiecte in cosul de cumparaturi!</h3>
+      @endif
 <br>
 
 
@@ -284,22 +303,36 @@
   </div>
   <!-- container ends here --> 
 </div>
-<!-- Scripts  --> 
-<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script> 
+
+
 <!-- Main js files --> 
 <script src="js/screen.js" type="text/javascript"></script> 
 <!-- Tabs --> 
 <script src="js/tabs.js" type="text/javascript"></script> 
 <!-- Include prettyPhoto --> 
 <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script> 
-<!-- Include Superfish --> 
-<script src="js/superfish.js" type="text/javascript"></script> 
-<script src="js/hoverIntent.js" type="text/javascript"></script> 
 
 <!-- Modernizr --> 
 <script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
 
 <script src="js/plus-min-cart.js" type="text/javascript"></script> 
-<script src="js/slideshow.js" type="text/javascript"></script> 
+
+@section('extra-js')
+  <script src="{{ asset('js/app.js') }}" ></script>
+  <script>
+    (function(){
+       const classname = document.querySelectorAll('.t-data')
+
+
+        Array.from(classname).forEach(function(element) {
+                element.addEventListener('change', function() {
+                  alert('changed');
+                  console.log("changed");
+                })
+
+    })();
+  </script>
+@endsection
+
 </body>
 </html>
