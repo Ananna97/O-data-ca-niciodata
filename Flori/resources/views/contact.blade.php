@@ -36,12 +36,12 @@
     <div class="mainmenu">
       <div id="mainmenu">
         <ul class="sf-menu">
-          <li><a href="/index" style="color: red">Acasa</a></li>
-          <li><a href="/about" style="color: orange">Despre noi</a></li>
-          <li><a href="/shop" style="color: yellow">Magazin</a>
+          <li><a href="/index" style="color: black">Acasa</a></li>
+          <li><a href="/about" style="color: black">Despre noi</a></li>
+          <li><a href="/shop" style="color: black">Magazin</a>
           </li>
-          <li><a href="/promotions" style="color: green">Preparate</a></li>
-          <li><a href="/contact" style="color: blue" id="visited">Contact</a></li>
+          <li><a href="/promotions" style="color: black">Preparate</a></li>
+          <li><a href="/contact" style="color: orange" id="visited">Contact</a></li>
            @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Logare') }}</a>

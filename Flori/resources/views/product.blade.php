@@ -129,11 +129,11 @@
           <li><a href="/contact" style="color: black">Contact</a></li>
            @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('logare') }}</a>
                 </li>
                 @if (Route::has('signup'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('signup') }}" >Sign Up</a>
+                        <a class="nav-link" href="{{ route('signup') }}" >Autentificare</a>
                     </li>
                     
                 @endif
@@ -145,7 +145,7 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{ __('Delogare') }}
                         </a>
         
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -207,7 +207,7 @@
     <div class="product-description">
       <span class="name_prod">{{ $product->name_product }}</span>
       <br><br>
-      <h5>Category: {{ $product->category }}</h5>
+      <h5>Categorie: {{ $product->category }}</h5>
       <br><br>
       <p>{!! $product->description !!}</p>
       <br><br>
@@ -218,14 +218,14 @@
  
     <!-- Product Pricing -->
     <div class="product-price">
-      <span>{{ $product->price }} RON / piece </span>
+      <span>{{ $product->price }} RON / bucata </span>
       
      <form action="{{ route('cart.store') }}" method="POST">
       {{ csrf_field() }}
       <input type="hidden" name='id_product' value="{{ $product->id_product}}">
        <input type="hidden" name='name_product' value="{{ $product->name_product}}">
         <input type="hidden" name='price' value="{{ $product->price}}">
-                    <button type="submit" class="cart-butn">Add to Cart</button>
+                    <button type="submit" class="cart-butn">Adauga in cos</button>
                 </form>
     </div>
   </div>

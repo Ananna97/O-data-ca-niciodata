@@ -93,12 +93,12 @@
     <div class="mainmenu">
       <div id="mainmenu">
         <ul class="sf-menu">
-          <li><a href="/index" style="color: red">Acasa</a></li>
-          <li><a href="/about" style="color: orange">Despre noi</a></li>
-          <li><a href="/shop" style="color: yellow" id="visited">Magazin</a>
+          <li><a href="/index" style="color: black">Acasa</a></li>
+          <li><a href="/about" style="color: black">Despre noi</a></li>
+          <li><a href="/shop" style="color: orange" id="visited">Magazin</a>
           </li>
-          <li><a href="/promotions" style="color: green">Preparate</a></li>
-          <li><a href="/contact" style="color: blue">Contact</a></li>
+          <li><a href="/promotions" style="color: black">Preparate</a></li>
+          <li><a href="/contact" style="color: black">Contact</a></li>
             @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Logare') }}</a>
@@ -155,7 +155,7 @@
 <div class="breadcrumbs">
   <div class="container">
     <header>
-      <h3>Products Page</h3>
+      <h3>Magazin de obiecte traditionale</h3>
       
     </header>
   </div>
@@ -181,7 +181,7 @@
             <input type="hidden" name='id_product' value="{{ $product->id_product}}">
              <input type="hidden" name='name_product' value="{{ $product->name_product}}">
               <input type="hidden" name='price' value="{{ $product->price}}">
-                <button type="submit" class="p-add">Add to Cart</button>
+                <button type="submit" class="p-add">Adauga in cos</button>
           </form></td>
       </tr>
         @endforeach
