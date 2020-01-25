@@ -131,10 +131,10 @@
 <br>
   <label for="username"><b>Nume de utilizator</b></label>
 
-    <input type="text" placeholder="Enter username" name="username" required>
+    <input type="text" placeholder="Nume de utilizator" name="username" required>
 
     <label for="password"><b>Parola</b></label>
-    <input type="password" placeholder="Enter password" name="password" required>
+    <input type="password" placeholder="Parola" name="password" required>
 
 
     <button type="submit">Logare</button>
