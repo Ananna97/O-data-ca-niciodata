@@ -45,7 +45,10 @@ Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::get('empty',function() {
 	Cart::destroy();
 });
+Route::get('/delete-cart-product/{id_product}','CartController@removeCartProduct');
 
+Route::GET('/submitOrder', 'CartController@submitOrder')->name('cart.submmit');
+Route::patch('/cart/{rowId}', 'CartController@update')->name('cart.update');
 
 //Login
 

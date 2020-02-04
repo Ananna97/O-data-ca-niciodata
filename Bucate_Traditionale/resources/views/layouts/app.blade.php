@@ -75,8 +75,9 @@
                         </form>
                     </div>
                 </li>
+                <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
             @endguest
-          <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
+          
         </ul>
       </div>
 
@@ -90,7 +91,36 @@
           <option value="/shop">Magazin</option>
           <option value="/promotions">Preparate</option>
           <option value="/contact">Contact</option>
-          <option value="/cart">Cos de cumparaturi</option>
+          @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Logare') }}</a>
+                </li>
+                @if (Route::has('signup'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('signup') }}" >Autentificare</a>
+                    </li>
+                    
+                @endif
+                
+            @else
+                <li class="nav-item dropdown">
+                    
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Delogare') }}
+                        </a>
+        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+                <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
+            @endguest
+
         </select>
       </form>
     </div>

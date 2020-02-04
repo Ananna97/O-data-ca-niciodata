@@ -1548,18 +1548,7 @@ ul.total_price {
     margin: 1em 0 0 0;
     list-style: none;
 }
-.cart-total a {
-    color: #fff;
-    background: #FF7000;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    display: inline-block;
-    margin-top: 1em;
-}
-.cart-total a:hover {
-    background: #f690dc;
-}
+
 /*--quantity-starts--*/
 .quantity{
 	margin: 1.5em 0;

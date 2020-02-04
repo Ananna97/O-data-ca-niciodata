@@ -139,7 +139,7 @@
                 @endif
             @else
                 <li class="nav-item dropdown">
-                    
+                  
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
@@ -153,8 +153,9 @@
                         </form>
                     </div>
                 </li>
+                <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
             @endguest
-          <li><a href="/cart"><img src="../images/cart.png" style="width:35px"></a></li>
+          
         </ul>
       </div>
 

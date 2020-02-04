@@ -68,8 +68,9 @@
                         </form>
                     </div>
                 </li>
+                <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
             @endguest
-          <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
+          
         </ul>
       </div>
 
@@ -129,7 +130,7 @@
       <ul>
         <li>Romania, Bucharest</li>
         <li>Telefon: +40 728 790 182</li>
-        <li>Website: <a href="#" title="" style="color:black">The Lazy Unicorn</a></li>
+        <li>Website: <a href="#" title="" style="color:black">O data Ca Niciodata</a></li>
         <li>Email: <a href="#" title="" style="color:black">thelazyunicorn97@gmail.com</a></li>
       </ul>
     </section>

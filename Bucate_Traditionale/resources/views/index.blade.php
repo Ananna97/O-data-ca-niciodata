@@ -53,6 +53,7 @@
                     </li>
                     
                 @endif
+                
             @else
                 <li class="nav-item dropdown">
                     
@@ -69,8 +70,12 @@
                         </form>
                     </div>
                 </li>
+                <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
             @endguest
-          <li><a href="/cart"><img src="images/cart.png" style="width:35px"></a></li>
+
+            
+          
+          
         </ul>
       </div>
 
